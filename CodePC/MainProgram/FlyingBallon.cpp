@@ -1,5 +1,6 @@
 #include "Game.h"
 #include <ctime>
+
 #ifdef _DEBUG
 #pragma comment(lib, "sfml-window-d.lib")
 #pragma comment(lib, "sfml-system-d.lib")

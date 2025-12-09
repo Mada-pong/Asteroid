@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Bin",
+    "\\CodePC",
+    "\\CodePC\\MainProgram",
+    "\\External",
+    "\\Obj"
   ],
+  "SelectedNode": "\\CodePC\\MainProgram\\Character.h",
   "PreviewInSolutionExplorer": false
 }
