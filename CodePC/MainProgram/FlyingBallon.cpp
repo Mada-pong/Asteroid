@@ -11,6 +11,7 @@
 #pragma comment(lib, "sfml-graphics.lib")
 #endif
 
+/*
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
@@ -19,3 +20,4 @@ int main()
 	game.run();
 	return 0;
 }
+*/

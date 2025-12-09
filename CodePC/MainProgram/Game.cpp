@@ -64,7 +64,6 @@ Game::~Game()
 
 void Game::run()
 {
-	
 	while (this->window.isOpen())
 	{
 		handleEvents();

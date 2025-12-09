@@ -1,7 +1,2 @@
-﻿  Balloon.cpp
-  Character.cpp
-  FlyingBallon.cpp
-  Game.cpp
-  Obstacle.cpp
-  Generating Code...
+﻿  AsteroidGame.cpp
   MainProgram.vcxproj -> C:\git hub repo\Asteroid\Bin\x64\TemplateD.exe

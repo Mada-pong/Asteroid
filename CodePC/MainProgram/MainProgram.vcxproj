@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="AsteroidGame.cpp" />
     <ClCompile Include="Balloon.cpp" />
     <ClCompile Include="Character.cpp" />

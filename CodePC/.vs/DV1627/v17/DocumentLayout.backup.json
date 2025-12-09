@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\git hub repo\\Asteroid\\CodePC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\AsteroidGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\AsteroidGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Obstacle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\Obstacle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\AsteroidGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\AsteroidGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Asteroid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\Asteroid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\FlyingBallon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\FlyingBallon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFA3F943-8701-4E20-A183-D5C3C8375B61}|MainProgram\\MainProgram.vcxproj|solutionrelative:MainProgram\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +34,137 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Asteroid.cpp",
+              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Asteroid.cpp",
+              "RelativeDocumentMoniker": "MainProgram\\Asteroid.cpp",
+              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Asteroid.cpp",
+              "RelativeToolTip": "MainProgram\\Asteroid.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-09T21:35:45.494Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AsteroidGame.h",
+              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\AsteroidGame.h",
+              "RelativeDocumentMoniker": "MainProgram\\AsteroidGame.h",
+              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\AsteroidGame.h",
+              "RelativeToolTip": "MainProgram\\AsteroidGame.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-09T21:41:31.881Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.cpp",
-              "RelativeDocumentMoniker": "MainProgram\\Game.cpp",
-              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.cpp",
-              "RelativeToolTip": "MainProgram\\Game.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAABoAAAADAAAAAAAAAA==",
+              "Title": "AsteroidGame.cpp",
+              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\AsteroidGame.cpp",
+              "RelativeDocumentMoniker": "MainProgram\\AsteroidGame.cpp",
+              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\AsteroidGame.cpp",
+              "RelativeToolTip": "MainProgram\\AsteroidGame.cpp",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-09T14:18:09.394Z",
+              "WhenOpened": "2025-12-09T21:41:47.614Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "070f2a16-f486-45a9-87f8-8b873eae0d38",
+        "Display": 1,
+        "X": 927,
+        "Y": 50,
+        "Width": 1124,
+        "Height": 1002,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.h",
+              "RelativeDocumentMoniker": "MainProgram\\Game.h",
+              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.h",
+              "RelativeToolTip": "MainProgram\\Game.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAEwBIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-09T23:40:53.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Obstacle.cpp",
-              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Obstacle.cpp",
-              "RelativeDocumentMoniker": "MainProgram\\Obstacle.cpp",
-              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Obstacle.cpp",
-              "RelativeToolTip": "MainProgram\\Obstacle.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.cpp",
+              "RelativeDocumentMoniker": "MainProgram\\Game.cpp",
+              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\Game.cpp",
+              "RelativeToolTip": "MainProgram\\Game.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAEwCgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-09T14:18:08.641Z",
+              "WhenOpened": "2025-12-09T14:18:09.394Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "a6d3d6cf-0844-48e8-8663-edfc56de24c9",
+        "Display": 1,
+        "X": 358,
+        "Y": 163,
+        "Width": 1567,
+        "Height": 676,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FlyingBallon.cpp",
+              "DocumentMoniker": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\FlyingBallon.cpp",
+              "RelativeDocumentMoniker": "MainProgram\\FlyingBallon.cpp",
+              "ToolTip": "C:\\git hub repo\\Asteroid\\CodePC\\MainProgram\\FlyingBallon.cpp",
+              "RelativeToolTip": "MainProgram\\FlyingBallon.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-09T21:35:13.831Z",
               "EditorCaption": ""
             }
           ]
