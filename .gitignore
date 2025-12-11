@@ -11,9 +11,6 @@
 *.gch
 *.pch
 
-# Linker files
-*.ilk
-
 # Debugger Files
 *.pdb
 
