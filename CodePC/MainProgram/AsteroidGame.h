@@ -12,6 +12,9 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
+	sf::Font font;
+	sf::Text text;
+
 	void handleEvents();
 	void update();
 	void render();

@@ -6,6 +6,13 @@ AsteroidGame::AsteroidGame()
 	timePerFrame(sf::seconds(1.f / 60.f)),
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
+	this->font.loadFromFile("../Font/arial.ttf");
+
+	this->text.setFont(font);
+	this->text.setString("Hello world");
+
+	this->text.setCharacterSize(24);
+	this->text.setFillColor(sf::Color::Red);
 }
 
 AsteroidGame::~AsteroidGame()
@@ -42,5 +49,8 @@ void AsteroidGame::update()
 void AsteroidGame::render()
 {
 	this->window.clear();
+
+	this->window.draw(text);
+
 	this->window.display();
 }
