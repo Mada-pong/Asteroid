@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Asteroid Source">
+      <UniqueIdentifier>{9ad1d82c-5715-4978-a46a-93f0793a3c00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Balloon.cpp">
@@ -30,11 +33,14 @@
     <ClCompile Include="Obstacle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AsteroidGame.cpp">
+    <ClCompile Include="Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Asteroid.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Asteroid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidGame.cpp">
+      <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AsteroidGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

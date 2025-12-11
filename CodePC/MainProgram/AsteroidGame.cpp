@@ -1,4 +1,5 @@
 #include "AsteroidGame.h"
+#include <iostream>
 
 AsteroidGame::AsteroidGame()
 	: window(sf::VideoMode(WIDTH, HEIGHT), "Asteroid"),
