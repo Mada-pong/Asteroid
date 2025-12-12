@@ -6,11 +6,12 @@ class Player : public Entity
 {
 private: 
 	float baseSpeed = 5;
-	float baseRotationSpeed = 1;
+	float baseRotationSpeed = 10;
+	float rotationOffset = 90;
 
 	void Input();
 
-	void Forward(float speed); 
+	void Forward(sf::Vector2f vector); 
 	void Side(float speed);
 	void Turn(float turnRadius);
 public: 

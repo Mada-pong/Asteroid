@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include "CommonMathExpr.h"
 
 class Entity : public sf::Drawable, public sf::Transformable
 {
@@ -22,7 +23,6 @@ public:
 
 	void setScale(sf::Vector2f vectorScale);
 	sf::Vector2f getScale() const { return scale; };
-
 
 	virtual void update() = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;

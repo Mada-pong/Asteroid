@@ -11,6 +11,7 @@ Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
 	: Entity(startPosition.x, startPosition.y, color, radius)
 {
 	this->setScale(sf::Vector2f(0.7f, 2));
+	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
 }
 
 void Player::Input()
@@ -32,18 +33,22 @@ void Player::Input()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
-		Forward(baseSpeed);
+		sf::Vector2f dir = CommonMathExpr::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
+
+		Forward(dir * baseSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 	{
-		Forward(-baseSpeed);
+		sf::Vector2f dir = CommonMathExpr::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
+
+		Forward(dir * -baseSpeed);
 	}
 }
 
-void Player::Forward(float speed)
+void Player::Forward(sf::Vector2f vector)
 {
-	this->move(sf::Vector2f(0, -speed));
+	this->move(vector);
 }
 
 void Player::Side(float speed)
@@ -53,6 +58,6 @@ void Player::Side(float speed)
 
 void Player::Turn(float turnRate)
 {
-	sphereShape.rotate(sf::degree)
+	this->sphereShape.rotate(turnRate);
 }
 
