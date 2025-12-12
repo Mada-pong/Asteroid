@@ -15,27 +15,27 @@ Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
 
 void Player::Input()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::R))
 	{
 		Turn(-baseRotationSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
 	{
 		Turn(-baseRotationSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
 	{
 		Turn(baseRotationSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
 	{
 		Forward(baseSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
 	{
 		Forward(-baseSpeed);
 	}
@@ -53,6 +53,5 @@ void Player::Side(float speed)
 
 void Player::Turn(float turnRate)
 {
-	sphereShape.rotate(sf::degree)
 }
 

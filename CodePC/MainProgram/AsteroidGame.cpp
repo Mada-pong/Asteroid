@@ -2,7 +2,7 @@
 #include <iostream>
 
 AsteroidGame::AsteroidGame()
-	: window(sf::VideoMode(WIDTH, HEIGHT), "Asteroid"),
+	: window(sf::VideoMode(sf::Vector2u(WIDTH, HEIGHT)), "Asteroid"),
 	timePerFrame(sf::seconds(1.f / 60.f)),
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
@@ -25,12 +25,11 @@ void AsteroidGame::run()
 
 void AsteroidGame::handleEvents()
 {
-	sf::Event event;
-	while (this->window.pollEvent(event))
+	while (auto event = window.pollEvent())
 	{
-		if (event.type == sf::Event::Closed)
+		if (event->is<sf::Event::Closed>())
 		{
-			this->window.close();
+			window.close();
 		}
 	}
 }

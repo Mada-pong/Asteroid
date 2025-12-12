@@ -16,9 +16,6 @@
     <Filter Include="Source Files\Asteroid Source">
       <UniqueIdentifier>{9ad1d82c-5715-4978-a46a-93f0793a3c00}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Template">
-      <UniqueIdentifier>{596ebc4d-021f-4866-9a64-48a9836f83f8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Template">
       <UniqueIdentifier>{20641222-3b4f-491c-ad2d-0793ebf871e1}</UniqueIdentifier>
     </Filter>
@@ -29,21 +26,6 @@
     </ClCompile>
     <ClCompile Include="AsteroidGame.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Balloon.cpp">
-      <Filter>Source Files\Template</Filter>
-    </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Source Files\Template</Filter>
-    </ClCompile>
-    <ClCompile Include="FlyingBallon.cpp">
-      <Filter>Source Files\Template</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files\Template</Filter>
-    </ClCompile>
-    <ClCompile Include="Obstacle.cpp">
-      <Filter>Source Files\Template</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files\Asteroid Source</Filter>

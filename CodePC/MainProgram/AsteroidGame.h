@@ -13,12 +13,7 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
-	sf::Font font;
-	sf::Text text;
-
 	Player* player; 
-
-
 
 	void handleEvents();
 	void update();

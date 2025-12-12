@@ -1,6 +1,6 @@
 #include "Balloon.h"
 #include <iostream>
-
+/*
 Balloon::Balloon(float speed)
 	:speed(speed), moves(false)
 {
@@ -46,3 +46,5 @@ void Balloon::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
 	target.draw(this->sprite);
 }
+
+*/

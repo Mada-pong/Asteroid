@@ -3,19 +3,23 @@
 void Character::receiveBalloon(Balloon * theBalloon)
 {
 	this->aBallon = theBalloon;
+	/*
 	this->aBallon->setPosition(this->rectShape.getGlobalBounds().left, this->rectShape.getGlobalBounds().top - 85.f); // 85.0 is the height of the Balloon, should use a memberfunction in Balloon for this
+	*/
 }
-
+/*
 Character::Character(float windowWidth, float windowHeight, sf::Color color, float width, float height, float speed)
 	:rectShape(sf::Vector2f(width,height)), aBallon(nullptr), speed(speed)
 {
 	this->rectShape.setFillColor(color);
-	this->rectShape.setPosition(windowWidth/2, windowHeight - width);
+	this->rectShape.setPosition(sf::Vector2f(windowWidth / 2, windowHeight - width);
 }
+*/
+/*
 
 void Character::act()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
 	{
 		this->rectShape.move(-this->speed, 0);
 		if (this->aBallon !=  nullptr)
@@ -23,7 +27,7 @@ void Character::act()
 			this->aBallon->setPosition(this->rectShape.getGlobalBounds().left, this->rectShape.getGlobalBounds().top - 85.f);
 		}
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
 	{
 		this->rectShape.move(this->speed, 0);
 		if (this->aBallon != nullptr )
@@ -32,7 +36,7 @@ void Character::act()
 		}
 	}
 	
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space))
 	{
 		if (this->aBallon != nullptr)
 		{
@@ -40,7 +44,7 @@ void Character::act()
 		}
 	}
 }
-
+*/
 
 void Character::releaseBalloon() 
 {
