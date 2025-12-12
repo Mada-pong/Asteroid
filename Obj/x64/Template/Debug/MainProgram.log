@@ -1,4 +1,6 @@
 ﻿  Asteroid.cpp
   AsteroidGame.cpp
+  Entity.cpp
+  Player.cpp
   Generating Code...
   MainProgram.vcxproj -> C:\git hub repo\Asteroid\Bin\x64\TemplateD.exe

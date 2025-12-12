@@ -6,13 +6,7 @@ AsteroidGame::AsteroidGame()
 	timePerFrame(sf::seconds(1.f / 60.f)),
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
-	this->font.loadFromFile("../Font/arial.ttf");
-
-	this->text.setFont(font);
-	this->text.setString("Hello world");
-
-	this->text.setCharacterSize(24);
-	this->text.setFillColor(sf::Color::Red);
+	this->player = new Player(sf::Vector2f(this->WIDTH, this->HEIGHT / 2), sf::Color::Red, 5);
 }
 
 AsteroidGame::~AsteroidGame()
@@ -43,14 +37,21 @@ void AsteroidGame::handleEvents()
 
 void AsteroidGame::update()
 {
+	this->elapsedTimeSinceLastUpdate += clock.restart();
 
+	while (elapsedTimeSinceLastUpdate > timePerFrame)
+	{
+		elapsedTimeSinceLastUpdate -= timePerFrame;
+
+		player->update();
+	}
 }
 
 void AsteroidGame::render()
 {
 	this->window.clear();
 
-	this->window.draw(text);
+	this->window.draw(*this->player);
 
 	this->window.display();
 }

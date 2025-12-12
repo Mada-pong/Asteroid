@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Player.h"
 
 class AsteroidGame
 {
@@ -14,6 +15,10 @@ private:
 
 	sf::Font font;
 	sf::Text text;
+
+	Player* player; 
+
+
 
 	void handleEvents();
 	void update();
