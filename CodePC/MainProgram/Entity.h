@@ -15,7 +15,7 @@ protected:
 	sf::Vector2f scale;
 public:
 	Entity();
-	Entity(float windowWidth, float windowHeight, sf::Color color, float radius);
+	Entity(sf::Vector2f startPosition, sf::Color color, float radius);
 
 	sf::Vector2f getPosition() const { return vector2; };
 	void setPosition(sf::Vector2f vector);

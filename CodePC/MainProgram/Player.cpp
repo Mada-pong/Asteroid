@@ -6,7 +6,7 @@ void Player::update()
 }
 
 Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
-	: Entity(startPosition.x, startPosition.y, color, radius)
+	: Entity(startPosition, color, radius)
 {
 	this->setScale(sf::Vector2f(0.7f, 2));
 	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));

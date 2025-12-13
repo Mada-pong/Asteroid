@@ -5,11 +5,11 @@ Entity::Entity()
 {
 }
 
-Entity::Entity(float windowWidth, float windowHeight, sf::Color color, float radius)
+Entity::Entity(sf::Vector2f startPosition, sf::Color color, float radius)
 	: sphereShape(radius)
 {
 	this->sphereShape.setFillColor(color);
-	setPosition(sf::Vector2f(windowWidth / 2, windowHeight - (radius / 2)));
+	setPosition(startPosition);
 }
 
 void Entity::setPosition(sf::Vector2f position)

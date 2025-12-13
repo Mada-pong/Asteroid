@@ -8,7 +8,7 @@ void Asteroid::update()
 }
 
 Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float radius)
-	: Entity(startPosition.x, startPosition.y, sf::Color::White, radius)
+	: Entity(startPosition, sf::Color::White, radius)
 {
 	this->sphereShape.setOrigin(radius / 2, radius / 2);
 
