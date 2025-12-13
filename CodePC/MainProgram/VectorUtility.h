@@ -2,6 +2,8 @@
 
 #include <cmath>
 #include <SFML/Graphics.hpp>
+#include <cstdlib>
+#include <random>
 
 
 class VectorUtility
@@ -17,5 +19,8 @@ public:
 	static sf::Vector2f getDirectionNormalize(sf::Vector2f targetPosition, sf::Vector2f currentPosition);
 
 	static float getMagnitude(sf::Vector2f vector);
+	static sf::Vector2f normalizeVector(sf::Vector2f vector);
+
+	static sf::Vector2f randomUnitVector();
 };
 

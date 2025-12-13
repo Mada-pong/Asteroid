@@ -14,7 +14,7 @@ private:
 	sf::Vector2f targetDirection; 
 public: 
 	void update() override;
-	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition,sf::Color color, float radius);
+	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size);
 
 	void Movement();
 };

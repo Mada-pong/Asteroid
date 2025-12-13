@@ -1,2 +1,13 @@
 ﻿  AsteroidGame.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         ]
+  (compiling source file 'AsteroidGame.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56):
+      the template instantiation context (the oldest one first) is
+          C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGame.h(20,50):
+          see reference to function template instantiation 'std::unique_ptr<AsteroidSpawner,std::default_delete<AsteroidSpawner>> std::make_unique<AsteroidSpawner,const int&,const int&,int,0>(const int &,const int &,int &&)' being compiled
+  
   MainProgram.vcxproj -> C:\git hub repo\Asteroid\Bin\x64\TemplateD.exe

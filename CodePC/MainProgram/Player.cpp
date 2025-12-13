@@ -19,24 +19,24 @@ void Player::Input()
 		Turn(-baseRotationSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
 		Turn(-baseRotationSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
 		Turn(baseRotationSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
 		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
 
 		Forward(dir * baseSpeed);
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
 		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
 

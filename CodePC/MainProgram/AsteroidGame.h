@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Player.h"
 #include "Asteroid.h"
+#include "AsteroidSpawner.h"
 
 class AsteroidGame
 {
@@ -15,8 +16,8 @@ private:
 	sf::Time elapsedTimeSinceLastUpdate;
 
 	Player* player; 
-	Asteroid* asteroid; 
 
+	std::unique_ptr<AsteroidSpawner> spawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);;
 
 	void handleEvents();
 	void update();
