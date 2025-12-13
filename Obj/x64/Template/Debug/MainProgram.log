@@ -1,5 +1,18 @@
 ﻿  Asteroid.cpp
   AsteroidGame.cpp
+  AsteroidSource.cpp
+  Entity.cpp
   Player.cpp
+  VectorUtilty.cpp
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,25): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,25): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,25): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,25): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,25): warning C4244:         ]
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,22): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,22): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,22): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,22): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp(16,22): warning C4244:         ]
   Generating Code...
   MainProgram.vcxproj -> C:\git hub repo\Asteroid\Bin\x64\TemplateD.exe

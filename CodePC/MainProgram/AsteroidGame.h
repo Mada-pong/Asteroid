@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Player.h"
+#include "Asteroid.h"
 
 class AsteroidGame
 {
@@ -13,11 +14,8 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
-	sf::Font font;
-	sf::Text text;
-
 	Player* player; 
-
+	Asteroid* asteroid; 
 
 
 	void handleEvents();

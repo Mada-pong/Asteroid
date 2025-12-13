@@ -22,9 +22,12 @@
     <Filter Include="Header Files\Template">
       <UniqueIdentifier>{20641222-3b4f-491c-ad2d-0793ebf871e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{0b6d552e-f26e-4d78-bf1d-6e7520bf1457}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Asteroid.cpp">
+    <ClCompile Include="AsteroidSource.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
     <ClCompile Include="AsteroidGame.cpp">
@@ -51,8 +54,11 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
-    <ClCompile Include="CommonMathExpr.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Asteroid.cpp">
+      <Filter>Source Files\Asteroid Source</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorUtilty.cpp">
+      <Filter>Source Files\Utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,7 +83,10 @@
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CommonMathExpr.h">
+    <ClInclude Include="VectorUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteroid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

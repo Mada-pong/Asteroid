@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include "Entity.h"
 #include <SFML/Graphics.hpp>
 
@@ -19,3 +21,5 @@ public:
 	void update() override;
 	Player(sf::Vector2f startPosition, sf::Color color, float radius);
 };
+
+#endif // !PLAYER_HPP

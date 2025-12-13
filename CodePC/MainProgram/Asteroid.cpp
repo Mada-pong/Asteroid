@@ -1,20 +1,15 @@
-#include "AsteroidGame.h"
+#include "Asteroid.h"
 
-#ifdef _DEBUG
-#pragma comment(lib, "sfml-window-d.lib")
-#pragma comment(lib, "sfml-system-d.lib")
-#pragma comment(lib, "sfml-graphics-d.lib")
-#else
-#pragma comment(lib, "sfml-window.lib")
-#pragma comment(lib, "sfml-system.lib")
-#pragma comment(lib, "sfml-graphics.lib")
-#endif
-
-int main()
+void Asteroid::update()
 {
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	AsteroidGame asteroidGame;
-	asteroidGame.run();
+}
 
-	return 0;
+Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f centerPosition, sf::Color color, float radius)
+	: Entity(startPosition.x, startPosition.y, sf::Color::White, radius)
+{
+	this->sphereShape.setOrigin(radius / 2, radius / 2);
+}
+
+void Asteroid::Move()
+{
 }

@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include "CommonMathExpr.h"
+#include "VectorUtility.h"
 
 class Entity : public sf::Drawable, public sf::Transformable
 {

@@ -1,6 +1,4 @@
 #include "Player.h"
-#include <iostream>
-
 
 void Player::update()
 {
@@ -33,14 +31,14 @@ void Player::Input()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
-		sf::Vector2f dir = CommonMathExpr::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
+		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
 
 		Forward(dir * baseSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 	{
-		sf::Vector2f dir = CommonMathExpr::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
+		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
 
 		Forward(dir * -baseSpeed);
 	}
