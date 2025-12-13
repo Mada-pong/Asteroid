@@ -6,8 +6,9 @@ AsteroidGame::AsteroidGame()
 	timePerFrame(sf::seconds(1.f / 60.f)),
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
-	this->player = new Player(sf::Vector2f(this->WIDTH, this->HEIGHT / 2), sf::Color::Red, 5);
-	this->asteroid = new Asteroid(sf::Vector2f(this->WIDTH, (this->HEIGHT / 2) + 200), sf::Vector2f(this->WIDTH, this->HEIGHT / 2),sf::Color::White, 10);
+	this->player = new Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
+	this->asteroid = new Asteroid(sf::Vector2f(1800, 400), 
+		sf::Vector2f(this->WIDTH / 2, this->HEIGHT / 2),sf::Color::White, 10);
 }
 
 AsteroidGame::~AsteroidGame()
@@ -46,6 +47,7 @@ void AsteroidGame::update()
 		elapsedTimeSinceLastUpdate -= timePerFrame;
 
 		player->update();
+		asteroid->update();
 	}
 }
 

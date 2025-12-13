@@ -1,4 +1,5 @@
 #include "Entity.h"
+#include <iostream>
 
 Entity::Entity()
 {
@@ -8,17 +9,19 @@ Entity::Entity(float windowWidth, float windowHeight, sf::Color color, float rad
 	: sphereShape(radius)
 {
 	this->sphereShape.setFillColor(color);
-	this->sphereShape.setPosition(sf::Vector2f(windowWidth/2, windowHeight - (radius / 2)));
+	setPosition(sf::Vector2f(windowWidth / 2, windowHeight - (radius / 2)));
 }
 
-void Entity::setPosition(sf::Vector2f vector)
+void Entity::setPosition(sf::Vector2f position)
 {
-	this->sphereShape.setPosition(vector);
+	this->vector2 = position;
+	this->sphereShape.setPosition(vector2);
 }
 
 void Entity::move(sf::Vector2f vector)
 {
-	this->sphereShape.move(vector);
+	this->vector2 = vector;
+	this->sphereShape.move(vector2);
 }
 
 void Entity::setScale(sf::Vector2f vectorScale)
