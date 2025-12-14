@@ -4,6 +4,7 @@
 #include "Entity.h"
 #include <SFML/Graphics.hpp>
 
+//TODO: Remove hard coded values and put it into a file maybe? 
 class Asteroid : public Entity
 {
 private: 
@@ -12,10 +13,16 @@ private:
 
 	sf::Vector2f targetPosition;
 	sf::Vector2f targetDirection; 
+
+	sf::Vector2f screenBorder;
+	sf::Vector2f borderOffset = sf::Vector2f(200, 100);
+
 public: 
 	void update() override;
-	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size);
+	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, sf::Vector2f screenBorder);
 
+	void isDead() const;
+	bool isOutside() const;
 	void Movement();
 };
 

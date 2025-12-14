@@ -7,6 +7,9 @@ AsteroidGame::AsteroidGame()
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
 	this->player = new Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
+	this->asteroid = new Asteroid(sf::Vector2f(455.836, 200), sf::Vector2f(400, 400), sf::Color::White, 15, sf::Vector2f(WIDTH, HEIGHT));
+
+	this->asteroid->isOutside();
 }
 
 AsteroidGame::~AsteroidGame()
@@ -54,6 +57,7 @@ void AsteroidGame::render()
 	this->window.clear();
 
 	this->window.draw(*this->player);
+	this->window.draw(*this->asteroid);
 	spawner->draw(window);
 
 	this->window.display();

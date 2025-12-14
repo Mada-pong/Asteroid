@@ -19,12 +19,18 @@ AsteroidSpawner::~AsteroidSpawner()
 
 void AsteroidSpawner::update(float deltaTime)
 {
+	cooldown.update(deltaTime);
+
 	for (size_t i = 0; i < this->asteroids.size(); i++)
 	{
 		asteroids[i].update();
 	}
 
-	cooldown.update(deltaTime);
+	asteroids.erase(std::remove_if(asteroids.begin(), asteroids.end(), [](const Asteroid& a)
+		{
+			return a.isOutside();
+		}),
+		asteroids.end());
 }
 
 void AsteroidSpawner::draw(sf::RenderWindow& window)
@@ -37,12 +43,13 @@ void AsteroidSpawner::draw(sf::RenderWindow& window)
 
 void AsteroidSpawner::spawnAsteroid(sf::Vector2f spawnPosition)
 {
-	asteroids.emplace_back(spawnPosition, centerPosition, sf::Color::White, 10);
+	asteroids.emplace_back(spawnPosition, centerPosition, sf::Color::White, 10, sf::Vector2f(xMax, yMax));
 }
 
 void AsteroidSpawner::spawnOutsideBorder()
 {
-	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
+	//sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
+	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(10);
 	spawnAsteroid(centerPosition + randomVector);
 }
 

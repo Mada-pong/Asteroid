@@ -9,7 +9,7 @@ class Entity : public sf::Drawable, public sf::Transformable
 {
 protected:
 	sf::CircleShape sphereShape;
-	sf::Vector2f vector2;
+	sf::Vector2f position;
 
 	float angle;
 	sf::Vector2f scale;
@@ -17,9 +17,9 @@ public:
 	Entity();
 	Entity(sf::Vector2f startPosition, sf::Color color, float radius);
 
-	sf::Vector2f getPosition() const { return vector2; };
+	sf::Vector2f getPosition() const { return position; };
 	void setPosition(sf::Vector2f vector);
-	void move(sf::Vector2f vector);
+	void move(sf::Vector2f delta);
 
 	void setScale(sf::Vector2f vectorScale);
 	sf::Vector2f getScale() const { return scale; };

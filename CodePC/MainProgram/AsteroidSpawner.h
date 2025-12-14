@@ -13,12 +13,15 @@ class AsteroidSpawner
 private: 
 	float xMin, xMax, yMin, yMax;
 	float outsideBorderRadius;
+	float removalRadius;
 
 	sf::Vector2f centerPosition;
 	std::vector<Asteroid> asteroids;
+	std::vector<int> indexToRemove;
+
 	bool isSpawning = false;
 
-	Cooldown cooldown = Cooldown(5.0f);
+	Cooldown cooldown = Cooldown(1.0f);
 
 public:
 	AsteroidSpawner(float xWidth, float yHeight, float spawnRate);
@@ -26,7 +29,6 @@ public:
 
 	void spawnAsteroid(sf::Vector2f spawnPosition);
 	void spawnOutsideBorder();
-
 
 	void setSpawnRate();
 	void setBoundary(float xMin, float xMax, float yMin, float yMax);

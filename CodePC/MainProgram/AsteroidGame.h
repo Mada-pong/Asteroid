@@ -17,6 +17,8 @@ private:
 
 	Player* player; 
 
+	Asteroid* asteroid; 
+
 	std::unique_ptr<AsteroidSpawner> spawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);;
 
 	void handleEvents();

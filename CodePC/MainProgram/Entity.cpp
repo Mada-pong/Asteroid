@@ -14,14 +14,14 @@ Entity::Entity(sf::Vector2f startPosition, sf::Color color, float radius)
 
 void Entity::setPosition(sf::Vector2f position)
 {
-	this->vector2 = position;
-	this->sphereShape.setPosition(vector2);
+	this->position = position;
+	this->sphereShape.setPosition(position);
 }
 
-void Entity::move(sf::Vector2f vector)
+void Entity::move(sf::Vector2f delta)
 {
-	this->vector2 = vector;
-	this->sphereShape.move(vector2);
+	this->position += delta;
+	this->sphereShape.setPosition(position);
 }
 
 void Entity::setScale(sf::Vector2f vectorScale)
