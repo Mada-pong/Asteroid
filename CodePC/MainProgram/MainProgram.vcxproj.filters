@@ -63,6 +63,12 @@
     <ClCompile Include="AsteroidSpawner.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
+    <ClCompile Include="Cooldown.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintDebugging.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsteroidGame.h">
@@ -93,6 +99,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AsteroidSpawner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cooldown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintDebugging.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

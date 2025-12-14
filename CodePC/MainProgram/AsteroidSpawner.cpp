@@ -1,25 +1,30 @@
 #include "AsteroidSpawner.h"
 
-AsteroidSpawner::AsteroidSpawner(int xWidth, int yHeight, float spawnRate)
-	: outsideBorderRadius(xWidth / 2), centerPosition(xWidth / 2, yHeight / 2)
+AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
+	: outsideBorderRadius(xWidth / 2), centerPosition(xWidth / 2.0f, yHeight / 2.0f)
 {
 	xMin = 0; 
 	xMax = xWidth;
 
 	yMin = 0; 
 	yMax = yHeight;
+
+	cooldown.setOnFinished([this]() { spawnOutsideBorder(); cooldown.start(); });
+	cooldown.start();
 }
 
 AsteroidSpawner::~AsteroidSpawner()
 {
 }
 
-void AsteroidSpawner::update()
+void AsteroidSpawner::update(float deltaTime)
 {
 	for (size_t i = 0; i < this->asteroids.size(); i++)
 	{
 		asteroids[i].update();
 	}
+
+	cooldown.update(deltaTime);
 }
 
 void AsteroidSpawner::draw(sf::RenderWindow& window)
@@ -45,12 +50,12 @@ void AsteroidSpawner::setSpawnRate()
 {
 }
 
-void AsteroidSpawner::setBoundary(int xMin, int xMax, int yMin, int yMax)
+void AsteroidSpawner::setBoundary(float xMin, float xMax, float yMin, float yMax)
 {
-	this->xMin = xMin; 
+	this->xMin = xMin;
 	this->xMax = xMax;
 
-	this->yMin = yMin; 
+	this->yMin = yMin;
 	this->yMax = yMax;
 }
 

@@ -6,12 +6,14 @@ c:\git hub repo\asteroid\obj\x64\template\debug\game.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\flyingballon.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\entity.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\vectorutilty.obj
+c:\git hub repo\asteroid\obj\x64\template\debug\printdebugging.obj
+c:\git hub repo\asteroid\obj\x64\template\debug\cooldown.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\character.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\balloon.obj
+c:\git hub repo\asteroid\obj\x64\template\debug\asteroidspawner.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\asteroidgame.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\asteroidsource.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\asteroid.obj
-c:\git hub repo\asteroid\obj\x64\template\debug\asteroidspawner.obj
 c:\git hub repo\asteroid\bin\x64\templated.exe
 c:\git hub repo\asteroid\bin\x64\templated.pdb
 c:\git hub repo\asteroid\obj\x64\template\debug\templated.ilk

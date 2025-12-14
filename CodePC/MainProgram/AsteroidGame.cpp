@@ -7,23 +7,6 @@ AsteroidGame::AsteroidGame()
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
 	this->player = new Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
-
-
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
-	spawner->spawnOutsideBorder();
 }
 
 AsteroidGame::~AsteroidGame()
@@ -62,7 +45,7 @@ void AsteroidGame::update()
 		elapsedTimeSinceLastUpdate -= timePerFrame;
 
 		player->update();
-		spawner->update();
+		spawner->update(timePerFrame.asSeconds());
 	}
 }
 
