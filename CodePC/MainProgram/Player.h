@@ -20,6 +20,8 @@ public:
 	// Inherited via Entity
 	void update() override;
 	Player(sf::Vector2f startPosition, sf::Color color, float radius);
+
+	void onDamage(int damage) override;
 };
 
 #endif // !PLAYER_HPP

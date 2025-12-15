@@ -4,8 +4,9 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "VectorUtility.h"
+#include "ICollision.h"
 
-class Entity : public sf::Drawable, public sf::Transformable
+class Entity : public sf::Drawable, public sf::Transformable, public ICollision
 {
 protected:
 	sf::CircleShape sphereShape;
@@ -13,6 +14,8 @@ protected:
 
 	float angle;
 	sf::Vector2f scale;
+
+	bool markedForRemoval = false;
 public:
 	Entity();
 	Entity(sf::Vector2f startPosition, sf::Color color, float radius);
@@ -26,6 +29,12 @@ public:
 
 	virtual void update() = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+
+	// Inherited via ICollision
+	sf::Vector2f getPosition() const override { return position; };
+	float getRadius() const override { return sphereShape.getRadius(); };
+	void onDamage(int damage) override;
+	void onHit() override;
 };
 
 #endif 

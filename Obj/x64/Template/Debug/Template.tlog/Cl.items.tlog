@@ -5,6 +5,7 @@ C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp;C:\git hub repo\
 C:\git hub repo\Asteroid\CodePC\MainProgram\Balloon.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Balloon.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Character.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Character.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Cooldown.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Cooldown.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\ICollision.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\ICollision.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\PrintDebugging.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\PrintDebugging.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\VectorUtilty.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Entity.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Entity.obj

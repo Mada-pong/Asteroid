@@ -12,6 +12,7 @@ Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
 	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
 }
 
+
 void Player::Input()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
@@ -59,3 +60,10 @@ void Player::Turn(float turnRate)
 	this->sphereShape.rotate(turnRate);
 }
 
+/// <summary>
+/// Collision on hit code
+/// </summary>
+void Player::onHit(int damage)
+{
+
+}
