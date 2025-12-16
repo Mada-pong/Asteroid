@@ -4,6 +4,7 @@
 #include "Asteroid.h"
 #include "AsteroidSpawner.h"
 #include "CollisionSystem.h"
+#include <vector>
 
 class AsteroidGame
 {
@@ -18,7 +19,11 @@ private:
 
 	Player* player; 
 	Asteroid* asteroid;
-	//CollisionSystem collision = CollisionSystem(*player, *asteroid);
+
+	std::vector<ICollision*> groupA;
+	std::vector<ICollision*> groupB;
+
+	CollisionSystem collision;
 
 	std::unique_ptr<AsteroidSpawner> spawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);;
 

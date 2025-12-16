@@ -8,6 +8,12 @@ AsteroidGame::AsteroidGame()
 {
 	this->player = new Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
 	this->asteroid = new Asteroid(sf::Vector2f(455.836, 200), sf::Vector2f(400, 400), sf::Color::White, 15, sf::Vector2f(WIDTH, HEIGHT));
+
+	groupA.push_back(player);
+	groupB.push_back(asteroid);
+
+	std::cout << player << std::endl;
+	std::cout << groupA[0] << std::endl;
 }
 
 AsteroidGame::~AsteroidGame()
@@ -49,7 +55,7 @@ void AsteroidGame::update()
 		player->update();
 		spawner->update(timePerFrame.asSeconds());
 
-		//collision.update();
+		collision.CheckCollision(groupA, groupB);
 	}
 }
 

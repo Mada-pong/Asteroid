@@ -1,14 +1,13 @@
 #pragma once
-#ifndef PRINTDEBUG_HPP
-#define PRINTDEBUG_HPP
-
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <string>
 
 class PrintDebug
 {
 public: 
-	void Print(sf::Vector2f vector);
+	static void Print(sf::Vector2f vector);
+	static void Print(std::string text);
+	static void Print(float number);
 };
 
-#endif // !PRINTDEBUGG_HPP

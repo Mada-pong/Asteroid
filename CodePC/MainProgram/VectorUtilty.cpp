@@ -32,6 +32,11 @@ sf::Vector2f VectorUtility::getDirectionNormalize(sf::Vector2f targetPosition, s
 	return normalizeVector(targetDirection);
 }
 
+/// <summary>
+/// getMagnitude gets the length of the entire vector
+/// </summary>
+/// <param name="vector"></param>
+/// <returns></returns>
 float VectorUtility::getMagnitude(sf::Vector2f vector)
 {
 	return std::sqrt(vector.x * vector.x + vector.y * vector.y);
