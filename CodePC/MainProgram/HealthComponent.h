@@ -1,4 +1,6 @@
-#pragma once
+#ifndef HEALTHCOMPONENT_HPP
+#define HEALTHCOMPONENT_HPP
+
 class HealthComponent
 {
 private: 
@@ -15,7 +17,9 @@ public:
 
 	void setHealth(int newHealth);
 	void addHealth(int health); 
+	void reduceHealth(int health);
 
 	bool checkIfDead();
 };
 
+#endif // !HEALTHCOMPONENT_HPP

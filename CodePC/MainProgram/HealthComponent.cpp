@@ -41,6 +41,11 @@ void HealthComponent::addHealth(int health)
 	}
 }
 
+void HealthComponent::reduceHealth(int health)
+{
+	this->health -= health;
+}
+
 bool HealthComponent::checkIfDead()
 {
 	if (this->health <= 0)

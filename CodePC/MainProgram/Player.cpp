@@ -6,7 +6,7 @@ void Player::update()
 }
 
 Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
-	: Entity(startPosition, color, radius)
+	: Entity(startPosition, color, radius), healthComponent(health)
 {
 	this->setScale(sf::Vector2f(0.7f, 2));
 	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
@@ -61,9 +61,9 @@ void Player::Turn(float turnRate)
 }
 
 /// <summary>
-/// Collision on hit code
+/// Collision on hit code. 
 /// </summary>
-void Player::onHit(int damage)
+void Player::onDamage(int damage)
 {
-
+	healthComponent.reduceHealth(damage);
 }

@@ -8,7 +8,7 @@ void Asteroid::update()
 }
 
 Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, sf::Vector2f screenBorder)
-	: Entity(startPosition, sf::Color::White, size), screenBorder(screenBorder)
+	: Entity(startPosition, sf::Color::White, size), screenBorder(screenBorder), healthComponent(baseHP)
 {
 	this->sphereShape.setOrigin(size / 2, size / 2);
 
@@ -16,6 +16,7 @@ Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::
 	this->targetDirection = VectorUtility::getDirectionNormalize(this->targetPosition, getPosition());
 }
 
+///TODO: Redo this to change toRemoval = true
 bool Asteroid::isOutside() const
 {
 	if (getPosition().y < 0 + borderOffset.y || screenBorder.y - borderOffset.y < getPosition().y)
@@ -30,4 +31,9 @@ bool Asteroid::isOutside() const
 void Asteroid::Movement()
 {
 	this->move(targetDirection);
+}
+
+void Asteroid::onDamage(int damage)
+{
+	healthComponent.reduceHealth(damage);
 }

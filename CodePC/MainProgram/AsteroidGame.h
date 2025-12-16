@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Asteroid.h"
 #include "AsteroidSpawner.h"
+#include "CollisionSystem.h"
 
 class AsteroidGame
 {
@@ -16,8 +17,8 @@ private:
 	sf::Time elapsedTimeSinceLastUpdate;
 
 	Player* player; 
-
-	Asteroid* asteroid; 
+	Asteroid* asteroid;
+	//CollisionSystem collision = CollisionSystem(*player, *asteroid);
 
 	std::unique_ptr<AsteroidSpawner> spawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);;
 

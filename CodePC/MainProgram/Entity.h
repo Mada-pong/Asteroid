@@ -30,8 +30,8 @@ public:
 	virtual void update() = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
-	// Inherited via ICollision
-	sf::Vector2f getPosition() const override { return position; };
+	//// Inherited via ICollision
+	sf::Vector2f getCollisionPosition() const override { return getPosition(); }
 	float getRadius() const override { return sphereShape.getRadius(); };
 	void onDamage(int damage) override;
 	void onHit() override;

@@ -25,9 +25,11 @@
     <ClCompile Include="AsteroidSpawner.cpp" />
     <ClCompile Include="Balloon.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="CollisionSystem.cpp" />
     <ClCompile Include="Cooldown.cpp" />
+    <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="ICollision.cpp" />
-    <ClCompile Include="PrintDebugging.cpp" />
+    <ClCompile Include="PrintDebug.cpp" />
     <ClCompile Include="VectorUtilty.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FlyingBallon.cpp" />
@@ -41,9 +43,11 @@
     <ClInclude Include="AsteroidSpawner.h" />
     <ClInclude Include="Balloon.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="CollisionSystem.h" />
     <ClInclude Include="Cooldown.h" />
+    <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="ICollision.h" />
-    <ClInclude Include="PrintDebugging.h" />
+    <ClInclude Include="PrintDebug.h" />
     <ClInclude Include="VectorUtility.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />

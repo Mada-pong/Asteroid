@@ -2,6 +2,7 @@
 #define PLAYER_HPP
 
 #include "Entity.h"
+#include "HealthComponent.h"
 #include <SFML/Graphics.hpp>
 
 class Player : public Entity
@@ -10,6 +11,10 @@ private:
 	float baseSpeed = 5;
 	float baseRotationSpeed = 10;
 	float rotationOffset = 90;
+
+	float health = 3;
+
+	HealthComponent healthComponent;
 
 	void Input();
 

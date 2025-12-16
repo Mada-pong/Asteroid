@@ -17,7 +17,6 @@ private:
 
 	sf::Vector2f centerPosition;
 	std::vector<Asteroid> asteroids;
-	std::vector<int> indexToRemove;
 
 	bool isSpawning = false;
 

@@ -25,6 +25,9 @@
     <Filter Include="Source Files\Utility">
       <UniqueIdentifier>{0b6d552e-f26e-4d78-bf1d-6e7520bf1457}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Collision">
+      <UniqueIdentifier>{9dcf565e-3ee6-416c-ac2c-41ad24b860aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AsteroidSource.cpp">
@@ -66,11 +69,17 @@
     <ClCompile Include="Cooldown.cpp">
       <Filter>Source Files\Utility</Filter>
     </ClCompile>
-    <ClCompile Include="PrintDebugging.cpp">
-      <Filter>Source Files\Utility</Filter>
-    </ClCompile>
     <ClCompile Include="ICollision.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthComponent.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintDebug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionSystem.cpp">
+      <Filter>Source Files\Collision</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,10 +116,16 @@
     <ClInclude Include="Cooldown.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PrintDebugging.h">
+    <ClInclude Include="ICollision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ICollision.h">
+    <ClInclude Include="HealthComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintDebug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

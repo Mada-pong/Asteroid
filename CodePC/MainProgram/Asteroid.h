@@ -3,6 +3,8 @@
 
 #include "Entity.h"
 #include <SFML/Graphics.hpp>
+#include "HealthComponent.h"
+
 
 //TODO: Remove hard coded values and put it into a file maybe? 
 class Asteroid : public Entity
@@ -10,6 +12,9 @@ class Asteroid : public Entity
 private: 
 	float baseSpeed = 5;
 	float baseRotationSpeed = 10;
+	float baseHP = 3;
+
+	HealthComponent healthComponent;
 
 	sf::Vector2f targetPosition;
 	sf::Vector2f targetDirection; 
@@ -24,6 +29,8 @@ public:
 	void isDead() const;
 	bool isOutside() const;
 	void Movement();
+
+	void onDamage(int damage) override;
 };
 
 #endif // !ASTEROID_HPP

@@ -34,3 +34,11 @@ void Entity::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(this->sphereShape);
 }
+
+void Entity::onDamage(int damage)
+{
+}
+
+void Entity::onHit()
+{
+}

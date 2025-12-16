@@ -8,9 +8,9 @@ class ICollision
 private: 
 	float collisionRadius;
 public:
-	~ICollision();
+	virtual ~ICollision() = default;
 
-	virtual sf::Vector2f getPosition() const = 0;
+	virtual sf::Vector2f getCollisionPosition() const = 0;
 	virtual float getRadius() const = 0;
 	virtual void onDamage(int damage) = 0;
 	virtual void onHit() = 0;
