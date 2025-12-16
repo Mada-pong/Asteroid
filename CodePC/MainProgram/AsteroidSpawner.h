@@ -6,7 +6,6 @@
 #include "Asteroid.h"
 #include <SFML/Graphics.hpp>
 #include "Cooldown.h"
-#include <iostream>
 
 class AsteroidSpawner
 {
@@ -20,7 +19,7 @@ private:
 
 	bool isSpawning = false;
 
-	Cooldown cooldown = Cooldown(1.0f);
+	Cooldown cooldown = Cooldown(.1f);
 
 public:
 	AsteroidSpawner(float xWidth, float yHeight, float spawnRate);
@@ -33,6 +32,8 @@ public:
 	void setBoundary(float xMin, float xMax, float yMin, float yMax);
 
 	void setIsSpawning(bool isSpawning);
+
+	std::vector<Asteroid> getAsteroids();
 
 	void update(float deltaTime);
 	void draw(sf::RenderWindow& window);

@@ -20,11 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
-    <ClCompile Include="AsteroidSource.cpp" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="AsteroidGame.cpp" />
     <ClCompile Include="AsteroidSpawner.cpp" />
-    <ClCompile Include="Balloon.cpp" />
-    <ClCompile Include="Character.cpp" />
     <ClCompile Include="CollisionSystem.cpp" />
     <ClCompile Include="Cooldown.cpp" />
     <ClCompile Include="HealthComponent.cpp" />
@@ -32,9 +30,6 @@
     <ClCompile Include="PrintDebug.cpp" />
     <ClCompile Include="VectorUtilty.cpp" />
     <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="FlyingBallon.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>

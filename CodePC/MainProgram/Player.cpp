@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "PrintDebug.h"
 
 void Player::update()
 {
@@ -58,6 +59,11 @@ void Player::Side(float speed)
 void Player::Turn(float turnRate)
 {
 	this->sphereShape.rotate(turnRate);
+}
+
+void Player::onHit()
+{
+	PrintDebug::Print("Player has been hit");
 }
 
 /// <summary>

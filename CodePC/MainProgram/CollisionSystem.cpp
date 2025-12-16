@@ -16,7 +16,11 @@ void CollisionSystem::CheckCollision(std::vector<ICollision*>& list_a, std::vect
 
 			float length = VectorUtility::getMagnitude(direction);
 
-			PrintDebug::Print(length);
+			if (length < (list_a[a_index]->getRadius() + list_b[b_index]->getRadius()))
+			{
+				list_a[a_index]->onHit();
+				list_b[b_index]->onHit();
+			}
 		}
 	}
 }

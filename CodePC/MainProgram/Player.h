@@ -26,6 +26,7 @@ public:
 	void update() override;
 	Player(sf::Vector2f startPosition, sf::Color color, float radius);
 
+	void onHit() override;
 	void onDamage(int damage) override;
 };
 

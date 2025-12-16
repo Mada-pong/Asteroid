@@ -1,6 +1,6 @@
 #include "Asteroid.h"
 #include "VectorUtility.h"
-#include <iostream>
+#include "PrintDebug.h"
 
 void Asteroid::update()
 {
@@ -36,4 +36,12 @@ void Asteroid::Movement()
 void Asteroid::onDamage(int damage)
 {
 	healthComponent.reduceHealth(damage);
+}
+
+void Asteroid::onHit()
+{
+	PrintDebug::Print("Asteroid has been hit");
+	healthComponent.reduceHealth(1);
+
+	this->markedForRemoval = true;
 }

@@ -26,6 +26,7 @@ void AsteroidSpawner::update(float deltaTime)
 		asteroids[i].update();
 	}
 
+	///TODO: Move the eraser code to a cleanup code
 	asteroids.erase(std::remove_if(asteroids.begin(), asteroids.end(), [](const Asteroid& a)
 		{
 			return a.isOutside();
@@ -43,13 +44,13 @@ void AsteroidSpawner::draw(sf::RenderWindow& window)
 
 void AsteroidSpawner::spawnAsteroid(sf::Vector2f spawnPosition)
 {
-	asteroids.emplace_back(spawnPosition, centerPosition, sf::Color::White, 10, sf::Vector2f(xMax, yMax));
+	asteroids.emplace_back(spawnPosition, centerPosition, sf::Color::White, 40, sf::Vector2f(xMax, yMax));
 }
 
 void AsteroidSpawner::spawnOutsideBorder()
 {
-	//sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
-	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(10);
+	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
+	//sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(200);
 	spawnAsteroid(centerPosition + randomVector);
 }
 
@@ -69,4 +70,9 @@ void AsteroidSpawner::setBoundary(float xMin, float xMax, float yMin, float yMax
 void AsteroidSpawner::setIsSpawning(bool isSpawning)
 {
 	this->isSpawning = isSpawning;
+}
+
+std::vector<ICollision> AsteroidSpawner::getAsteroids()
+{
+	return asteroids;
 }

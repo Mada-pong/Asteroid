@@ -20,7 +20,7 @@ private:
 	sf::Vector2f targetDirection; 
 
 	sf::Vector2f screenBorder;
-	sf::Vector2f borderOffset = sf::Vector2f(200, 100);
+	sf::Vector2f borderOffset = sf::Vector2f(-400, -500);
 
 public: 
 	void update() override;
@@ -31,6 +31,7 @@ public:
 	void Movement();
 
 	void onDamage(int damage) override;
+	void onHit() override;
 };
 
 #endif // !ASTEROID_HPP

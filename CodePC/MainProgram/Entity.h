@@ -27,6 +27,8 @@ public:
 	void setScale(sf::Vector2f vectorScale);
 	sf::Vector2f getScale() const { return scale; };
 
+	bool isMarkedForRemoval() const { return this->markedForRemoval; };
+
 	virtual void update() = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
