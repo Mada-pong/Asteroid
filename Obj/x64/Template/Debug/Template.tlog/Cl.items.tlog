@@ -1,17 +1,12 @@
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Asteroid.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Asteroid.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Source.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Source.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\AsteroidGame.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\AsteroidGame.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\AsteroidSpawner.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Balloon.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Balloon.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Character.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Character.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\CollisionSystem.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\CollisionSystem.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Cooldown.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Cooldown.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\HealthComponent.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\HealthComponent.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\ICollision.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\ICollision.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\PrintDebug.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\PrintDebug.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\VectorUtilty.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\VectorUtilty.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Entity.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Entity.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\FlyingBallon.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\FlyingBallon.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Game.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Game.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Obstacle.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Obstacle.obj
-C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Player.cpp;C:\Users\madge\Documents\GitHub\Asteroid\Obj\x64\Template\Debug\Player.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\Asteroid.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Asteroid.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\Source.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Source.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGame.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\AsteroidGame.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\AsteroidSpawner.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\CollisionSystem.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\CollisionSystem.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\Cooldown.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Cooldown.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\HealthComponent.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\HealthComponent.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\ICollision.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\ICollision.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\PrintDebug.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\PrintDebug.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\VectorUtilty.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\VectorUtilty.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\Entity.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Entity.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\Player.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Player.obj

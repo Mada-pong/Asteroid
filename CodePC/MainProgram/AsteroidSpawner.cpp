@@ -1,5 +1,6 @@
 #include "AsteroidSpawner.h"
 
+
 AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
 	: outsideBorderRadius(xWidth / 2), centerPosition(xWidth / 2.0f, yHeight / 2.0f)
 {
@@ -9,8 +10,21 @@ AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
 	yMin = 0; 
 	yMax = yHeight;
 
-	cooldown.setOnFinished([this]() { spawnOutsideBorder(); cooldown.start(); });
-	cooldown.start();
+	spawnOutsideBorder();
+
+	//cooldown.setOnFinished([this]() { spawnOutsideBorder(); cooldown.start(); });
+	//cooldown.start();
+}
+
+void AsteroidSpawner::populatePtrViewer(std::vector<Asteroid>& asteroids, std::vector<ICollision*>& out)
+{
+	out.clear();
+	out.reserve(asteroids.size());
+
+	for (size_t i = 0; i < asteroids.size(); i++)
+	{
+		out.push_back(&asteroids[i]);
+	}
 }
 
 AsteroidSpawner::~AsteroidSpawner()
@@ -44,13 +58,16 @@ void AsteroidSpawner::draw(sf::RenderWindow& window)
 
 void AsteroidSpawner::spawnAsteroid(sf::Vector2f spawnPosition)
 {
-	asteroids.emplace_back(spawnPosition, centerPosition, sf::Color::White, 40, sf::Vector2f(xMax, yMax));
+	if (isSpawning)
+	{
+		asteroids.emplace_back(spawnPosition, centerPosition, sf::Color::White, 40, 0,sf::Vector2f(xMax, yMax));
+	}
 }
 
 void AsteroidSpawner::spawnOutsideBorder()
 {
-	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
-	//sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(200);
+	//sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
+	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(200);
 	spawnAsteroid(centerPosition + randomVector);
 }
 
@@ -72,7 +89,9 @@ void AsteroidSpawner::setIsSpawning(bool isSpawning)
 	this->isSpawning = isSpawning;
 }
 
-std::vector<ICollision> AsteroidSpawner::getAsteroids()
+std::vector<ICollision*>& AsteroidSpawner::getAsteroidsPtrs()
 {
-	return asteroids;
+	populatePtrViewer(asteroids, asteroidPtrViewer);
+
+	return asteroidPtrViewer;
 }

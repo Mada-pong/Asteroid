@@ -16,11 +16,13 @@ private:
 
 	sf::Vector2f centerPosition;
 	std::vector<Asteroid> asteroids;
+	std::vector<ICollision*> asteroidPtrViewer;
 
-	bool isSpawning = false;
+	bool isSpawning = true;
 
-	Cooldown cooldown = Cooldown(.1f);
+	Cooldown cooldown = Cooldown(5.0f);
 
+	void populatePtrViewer(std::vector<Asteroid>& asteroids, std::vector<ICollision*>& out);
 public:
 	AsteroidSpawner(float xWidth, float yHeight, float spawnRate);
 	~AsteroidSpawner();
@@ -33,7 +35,7 @@ public:
 
 	void setIsSpawning(bool isSpawning);
 
-	std::vector<Asteroid> getAsteroids();
+	std::vector<ICollision*>& getAsteroidsPtrs();
 
 	void update(float deltaTime);
 	void draw(sf::RenderWindow& window);

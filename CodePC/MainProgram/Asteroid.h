@@ -10,7 +10,7 @@
 class Asteroid : public Entity
 {
 private: 
-	float baseSpeed = 5;
+	float baseSpeed = 1;
 	float baseRotationSpeed = 10;
 	float baseHP = 3;
 
@@ -24,7 +24,7 @@ private:
 
 public: 
 	void update() override;
-	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, sf::Vector2f screenBorder);
+	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, float speed, sf::Vector2f screenBorder);
 
 	void isDead() const;
 	bool isOutside() const;

@@ -17,10 +17,8 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
-	Player* player = new Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
-	Asteroid* asteroid;
-
-	std::vector<ICollision*> groupA{player};
+	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
+	std::vector<ICollision*> groupA{&player};
 
 	CollisionSystem collision;
 
