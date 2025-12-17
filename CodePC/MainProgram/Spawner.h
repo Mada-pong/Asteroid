@@ -5,13 +5,15 @@
 #include "Entity.h"
 #include <SFML/Graphics.hpp>
 #include "Cooldown.h"
+#include "Asteroid.h"
+#include "Projectile.h"
 
 template <typename T>
 class Spawner
 {
 private: 
 	std::vector<T> objects;
-	std::vector<ICollision*> PtrViewer;
+	std::vector<ICollision*> ptrViewer;
 
 	bool isSpawning;
 
@@ -22,9 +24,9 @@ public:
 	Spawner(float spawnRate);
 	~Spawner() = default;
 
-	void SpawnObject(sf::Vector2f spawnPosition);
+	virtual void SpawnObject(sf::Vector2f spawnPosition) = 0;
 
-	void setSpawnRate();
+	void setSpawnRate(float duration);
 	void setIsSpawning(bool isSpawning);
 
 	std::vector<ICollision*>& getObjectPtrs();

@@ -37,6 +37,11 @@ void Cooldown::start()
 	time = duration;
 }
 
+void Cooldown::setNewTime(float duration)
+{
+	this->duration = duration;
+}
+
 /// <summary>
 /// Store a callback function to be called back when the cooldown has been completed.
 /// </summary>

@@ -21,6 +21,7 @@ public:
 	
 	void start();
 
+	void setNewTime(float duration);
 	void setOnFinished(std::function<void()> callback);
 };
 
