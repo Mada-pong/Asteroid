@@ -17,7 +17,6 @@ protected:
 
 	bool markedForRemoval = false;
 public:
-	Entity();
 	Entity(sf::Vector2f startPosition, sf::Color color, float radius);
 
 	sf::Vector2f getPosition() const { return position; };

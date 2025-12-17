@@ -7,11 +7,11 @@ void Asteroid::update()
 	Movement();
 }
 
-Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, float speed, sf::Vector2f screenBorder)
-	: Entity(startPosition, sf::Color::White, size), screenBorder(screenBorder), healthComponent(baseHP),
+Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float radius, float speed, sf::Vector2f screenBorder)
+	: Entity(startPosition, sf::Color::White, radius), screenBorder(screenBorder), healthComponent(baseHP),
 	baseSpeed(speed)
 {
-	this->sphereShape.setOrigin(size / 2, size / 2);
+	this->sphereShape.setOrigin(radius, radius);
 
 	this->targetPosition = targetPosition;
 	this->targetDirection = VectorUtility::getDirectionNormalize(this->targetPosition, getPosition());

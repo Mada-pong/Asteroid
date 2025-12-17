@@ -1,9 +1,4 @@
 #include "Entity.h"
-#include <iostream>
-
-Entity::Entity()
-{
-}
 
 Entity::Entity(sf::Vector2f startPosition, sf::Color color, float radius)
 	: sphereShape(radius)

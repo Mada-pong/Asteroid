@@ -1,5 +1,6 @@
-﻿  Source.cpp
+﻿  Asteroid.cpp
   AsteroidGame.cpp
+C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Asteroid.cpp(11,97): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         [
@@ -8,7 +9,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.3520
   (compiling source file 'AsteroidGame.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56):
       the template instantiation context (the oldest one first) is
-          C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGame.h(25,50):
+          C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\AsteroidGame.h(25,50):
           see reference to function template instantiation 'std::unique_ptr<AsteroidSpawner,std::default_delete<AsteroidSpawner>> std::make_unique<AsteroidSpawner,const int&,const int&,int,0>(const int &,const int &,int &&)' being compiled
   
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
@@ -23,9 +24,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.3520
   (compiling source file 'AsteroidSpawner.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103):
       the template instantiation context (the oldest one first) is
-          C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp(63,13):
+          C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp(63,13):
           see reference to function template instantiation 'Asteroid &std::vector<Asteroid,std::allocator<Asteroid>>::emplace_back<sf::Vector2f&,sf::Vector2f&,const sf::Color&,int,int,sf::Vector2f>(sf::Vector2f &,sf::Vector2f &,const sf::Color &,int &&,int &&,sf::Vector2f &&)' being compiled
-              C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp(63,25):
+              C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp(63,25):
               see the first reference to 'std::vector<Asteroid,std::allocator<Asteroid>>::emplace_back' in 'AsteroidSpawner::spawnAsteroid'
           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(924,24):
           see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<sf::Vector2f&,sf::Vector2f&,const sf::Color&,int,int,sf::Vector2<float>>(sf::Vector2f &,sf::Vector2f &,const sf::Color &,int &&,int &&,sf::Vector2<float> &&)' being compiled
@@ -48,7 +49,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.3520
               _Objty=Asteroid
           ]
   
+  Entity.cpp
   Player.cpp
-C:\git hub repo\Asteroid\CodePC\MainProgram\Player.cpp(10,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\madge\Documents\GitHub\Asteroid\CodePC\MainProgram\Player.cpp(10,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Source.cpp
   Generating Code...
-  MainProgram.vcxproj -> C:\git hub repo\Asteroid\Bin\x64\TemplateD.exe
+  MainProgram.vcxproj -> C:\Users\madge\Documents\GitHub\Asteroid\Bin\x64\TemplateD.exe
