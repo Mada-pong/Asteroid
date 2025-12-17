@@ -11,7 +11,7 @@
 template <typename T>
 class Spawner
 {
-private: 
+protected: 
 	std::vector<T> objects;
 	std::vector<ICollision*> ptrViewer;
 
@@ -19,20 +19,57 @@ private:
 
 	Cooldown spawnCooldown;
 
-	void populatePtrViewer(std::vector<T>& objects, std::vector<ICollision*>& out);
+	void populatePtrViewer(std::vector<T>& objects, std::vector<ICollision*>& out)
+	{
+		out.clear();
+		out.reserve(objects.size());
+
+		for (size_t i = 0; i < objects.size(); i++)
+		{
+			out.push_back(&objects[i]);
+		}
+	}
 public:
-	Spawner(float spawnRate);
+	Spawner(float spawnRate): spawnCooldown(spawnRate){}
+
 	~Spawner() = default;
 
-	virtual void SpawnObject(sf::Vector2f spawnPosition) = 0;
+	virtual void spawnObject(sf::Vector2f spawnPosition) = 0;
 
-	void setSpawnRate(float duration);
-	void setIsSpawning(bool isSpawning);
+	virtual void setSpawnRate(float duration)
+	{
+		this->spawnCooldown.setNewTime(duration);
+	}
 
-	std::vector<ICollision*>& getObjectPtrs();
+	virtual void setIsSpawning(bool isSpawning)
+	{
+		this->isSpawning = isSpawning;
+	}
 
-	void update(float deltaTime);
-	void draw(sf::RenderWindow& window);
+	virtual std::vector<ICollision*>& getObjectPtrs()
+	{
+		populatePtrViewer(objects, ptrViewer);
+
+		return this->ptrViewer;
+	}
+
+	virtual void update(float deltaTime)
+	{
+		spawnCooldown.update(deltaTime);
+
+		for (size_t i = 0; i < this->objects.size(); i++)
+		{
+			objects[i].update();
+		}
+	}
+
+	virtual void draw(sf::RenderWindow& window)
+	{
+		for (size_t i = 0; i < this->objects.size(); i++)
+		{
+			window.draw(objects[i]);
+		}
+	}
 };
 
 #endif // !SPAWNER_HPP

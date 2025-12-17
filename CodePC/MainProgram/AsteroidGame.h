@@ -24,7 +24,7 @@ private:
 
 	Projectile testProjectile = Projectile(sf::Vector2f(400, 100), sf::Color::Yellow, 5, 0, 5.0f, 1.0f);
 
-	std::unique_ptr<AsteroidSpawner> spawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);;
+	std::unique_ptr<AsteroidSpawner> asteroidSpawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);
 
 	void handleEvents();
 	void update();

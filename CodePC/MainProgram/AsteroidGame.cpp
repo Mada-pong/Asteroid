@@ -1,5 +1,4 @@
 #include "AsteroidGame.h"
-#include <iostream>
 
 AsteroidGame::AsteroidGame()
 	: window(sf::VideoMode(WIDTH, HEIGHT), "Asteroid"),
@@ -44,9 +43,9 @@ void AsteroidGame::update()
 
 		player.update();
 		testProjectile.update();
-		//spawner->update(timePerFrame.asSeconds());
+		asteroidSpawner->update(timePerFrame.asSeconds());
 
-		collision.CheckCollision(groupA, spawner->getAsteroidsPtrs());
+		collision.CheckCollision(groupA, asteroidSpawner->getObjectPtrs());
 	}
 }
 
@@ -56,7 +55,7 @@ void AsteroidGame::render()
 
 	this->window.draw(this->player);
 	this->window.draw(this->testProjectile);
-	spawner->draw(window);
+	asteroidSpawner->draw(window);
 
 	this->window.display();
 }
