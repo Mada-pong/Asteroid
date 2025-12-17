@@ -1,10 +1,10 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Player.h"
-#include "Asteroid.h"
 #include "AsteroidSpawner.h"
 #include "CollisionSystem.h"
 #include <vector>
+#include "Projectile.h"
 
 class AsteroidGame
 {
@@ -17,10 +17,12 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
+	CollisionSystem collision;
+
 	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
 	std::vector<ICollision*> groupA{&player};
 
-	CollisionSystem collision;
+	Projectile testProjectile = Projectile(sf::Vector2f(400, 100), sf::Color::Yellow, 5, 0, 5.0f, 1.0f);
 
 	std::unique_ptr<AsteroidSpawner> spawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);;
 

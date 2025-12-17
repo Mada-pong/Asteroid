@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="AsteroidGame.cpp" />
     <ClCompile Include="AsteroidSpawner.cpp" />
@@ -28,6 +29,7 @@
     <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="ICollision.cpp" />
     <ClCompile Include="PrintDebug.cpp" />
+    <ClCompile Include="Spawner.cpp" />
     <ClCompile Include="VectorUtilty.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -43,6 +45,8 @@
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="ICollision.h" />
     <ClInclude Include="PrintDebug.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Spawner.h" />
     <ClInclude Include="VectorUtility.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />

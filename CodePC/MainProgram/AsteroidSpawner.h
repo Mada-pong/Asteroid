@@ -12,7 +12,7 @@ class AsteroidSpawner
 private: 
 	float xMin, xMax, yMin, yMax;
 	float outsideBorderRadius;
-	float removalRadius;
+	float removalRadius = 1000;
 
 	sf::Vector2f centerPosition;
 	std::vector<Asteroid> asteroids;

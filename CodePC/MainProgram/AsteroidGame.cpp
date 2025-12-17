@@ -6,7 +6,6 @@ AsteroidGame::AsteroidGame()
 	timePerFrame(sf::seconds(1.f / 60.f)),
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
-	//this->asteroid = new Asteroid(sf::Vector2f(455.836, 200), sf::Vector2f(400, 400), sf::Color::White, 15, sf::Vector2f(WIDTH, HEIGHT));
 }
 
 AsteroidGame::~AsteroidGame()
@@ -44,10 +43,10 @@ void AsteroidGame::update()
 		elapsedTimeSinceLastUpdate -= timePerFrame;
 
 		player.update();
-		spawner->update(timePerFrame.asSeconds());
+		testProjectile.update();
+		//spawner->update(timePerFrame.asSeconds());
 
 		collision.CheckCollision(groupA, spawner->getAsteroidsPtrs());
-		groupA[0]->getCollisionPosition();
 	}
 }
 
@@ -56,6 +55,7 @@ void AsteroidGame::render()
 	this->window.clear();
 
 	this->window.draw(this->player);
+	this->window.draw(this->testProjectile);
 	spawner->draw(window);
 
 	this->window.display();

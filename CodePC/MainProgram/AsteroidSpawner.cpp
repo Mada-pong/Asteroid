@@ -1,5 +1,5 @@
 #include "AsteroidSpawner.h"
-
+#include "Spawner.h"
 
 AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
 	: outsideBorderRadius(xWidth / 2), centerPosition(xWidth / 2.0f, yHeight / 2.0f)
@@ -9,8 +9,6 @@ AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
 
 	yMin = 0; 
 	yMax = yHeight;
-
-	spawnOutsideBorder();
 
 	cooldown.setOnFinished([this]() { spawnOutsideBorder(); cooldown.start(); });
 	cooldown.start();

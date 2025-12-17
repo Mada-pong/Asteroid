@@ -4,7 +4,7 @@
 
 void Asteroid::update()
 {
-	Movement();
+	this->move(targetDirection * baseSpeed);
 }
 
 Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float radius, float speed, sf::Vector2f screenBorder)
@@ -27,11 +27,6 @@ bool Asteroid::isOutside() const
 		return true;
 
 	return false;
-}
-
-void Asteroid::Movement()
-{
-	this->move(targetDirection * baseSpeed);
 }
 
 void Asteroid::onDamage(int damage)

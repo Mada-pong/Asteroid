@@ -28,7 +28,6 @@ public:
 
 	void isDead() const;
 	bool isOutside() const;
-	void Movement();
 
 	void onDamage(int damage) override;
 	void onHit() override;
