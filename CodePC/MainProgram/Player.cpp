@@ -1,13 +1,22 @@
 #include "Player.h"
 #include "PrintDebug.h"
 
-void Player::update()
+void Player::update(float deltaTime)
 {
 	Input();
+
+	projectileSpawner.update(deltaTime);
+}
+
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+	Entity::draw(target, states);
+
+	projectileSpawner.draw(target, states);
 }
 
 Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
-	: Entity(startPosition, color, radius), healthComponent(health)
+	: Entity(startPosition, color, radius), healthComponent(health), projectileSpawner(fireRate)
 {
 	this->setScale(sf::Vector2f(0.7f, 2));
 	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
@@ -44,6 +53,11 @@ void Player::Input()
 
 		Forward(dir * -baseSpeed);
 	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+	{
+		projectileSpawner.spawnObject(this->getPosition(), this->sphereShape.getRotation() - this->rotationOffset, 10);
+	}
 }
 
 void Player::Forward(sf::Vector2f vector)
@@ -72,4 +86,9 @@ void Player::onHit()
 void Player::onDamage(int damage)
 {
 	healthComponent.reduceHealth(damage);
+}
+
+ProjectileSpawner& Player::getSpawner()
+{
+	return projectileSpawner;
 }

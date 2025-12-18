@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="ProjectileSpawner.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="AsteroidGame.cpp" />
     <ClCompile Include="AsteroidSpawner.cpp" />
@@ -46,6 +47,7 @@
     <ClInclude Include="ICollision.h" />
     <ClInclude Include="PrintDebug.h" />
     <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ProjectileSpawner.h" />
     <ClInclude Include="Spawner.h" />
     <ClInclude Include="VectorUtility.h" />
     <ClInclude Include="Entity.h" />

@@ -5,6 +5,7 @@
 #include "CollisionSystem.h"
 #include <vector>
 #include "Projectile.h"
+#include "ProjectileSpawner.h"
 
 class AsteroidGame
 {
@@ -21,8 +22,6 @@ private:
 
 	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
 	std::vector<ICollision*> groupA{&player};
-
-	Projectile testProjectile = Projectile(sf::Vector2f(400, 100), sf::Color::Yellow, 5, 0, 5.0f, 1.0f);
 
 	std::unique_ptr<AsteroidSpawner> asteroidSpawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);
 

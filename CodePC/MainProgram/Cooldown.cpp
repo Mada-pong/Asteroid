@@ -29,7 +29,7 @@ void Cooldown::update(float deltaTime)
 }
 
 /// <summary>
-/// Start the cooldown timer from the initial duration.
+/// Start the cooldown timer from the initial duration and reset it.
 /// </summary>
 void Cooldown::start()
 {
@@ -49,4 +49,9 @@ void Cooldown::setNewTime(float duration)
 void Cooldown::setOnFinished(std::function<void()> callback)
 {
 	onFinished = std::move(callback);
+}
+
+float Cooldown::getTime()
+{
+	return this->time;
 }

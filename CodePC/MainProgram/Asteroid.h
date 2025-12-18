@@ -23,7 +23,7 @@ private:
 	sf::Vector2f borderOffset = sf::Vector2f(-400, -500);
 
 public: 
-	void update() override;
+	void update(float deltaTime) override;
 	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, float speed, sf::Vector2f screenBorder);
 
 	void isDead() const;

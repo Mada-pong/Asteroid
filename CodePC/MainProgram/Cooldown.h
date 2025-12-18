@@ -23,6 +23,8 @@ public:
 
 	void setNewTime(float duration);
 	void setOnFinished(std::function<void()> callback);
+
+	float getTime();
 };
 
 

@@ -39,13 +39,14 @@ void AsteroidGame::update()
 
 	while (elapsedTimeSinceLastUpdate > timePerFrame)
 	{
+		float deltaTime = timePerFrame.asSeconds();
 		elapsedTimeSinceLastUpdate -= timePerFrame;
 
-		player.update();
-		testProjectile.update();
-		asteroidSpawner->update(timePerFrame.asSeconds());
+		player.update(deltaTime);
+		asteroidSpawner->update(deltaTime);
 
 		collision.CheckCollision(groupA, asteroidSpawner->getObjectPtrs());
+		collision.CheckCollision(player.getSpawner().getObjectPtrs(), asteroidSpawner->getObjectPtrs());
 	}
 }
 
@@ -54,9 +55,7 @@ void AsteroidGame::render()
 	this->window.clear();
 
 	this->window.draw(this->player);
-	this->window.draw(this->testProjectile);
-	asteroidSpawner->draw(window);
-
+	this->window.draw(*this->asteroidSpawner);
 	this->window.display();
 }
 

@@ -2,7 +2,7 @@
 #include "VectorUtility.h"
 #include "PrintDebug.h"
 
-void Asteroid::update()
+void Asteroid::update(float deltaTime)
 {
 	this->move(targetDirection * baseSpeed);
 }

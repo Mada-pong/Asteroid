@@ -14,8 +14,10 @@ private:
 
 	sf::Vector2f direction;
 public:
-	void update() override;
+	void update(float deltaTime) override;
 	Projectile(sf::Vector2f startPosition, sf::Color color, float radius, float angle, float velocity, float timeToLive);
+
+	void onHit() override;
 };
 
 #endif // !

@@ -9,15 +9,14 @@
 #include "Projectile.h"
 
 template <typename T>
-class Spawner
+class Spawner : public sf::Drawable
 {
 protected: 
 	std::vector<T> objects;
 	std::vector<ICollision*> ptrViewer;
 
-	bool isSpawning;
+	bool isSpawning = false;
 
-	Cooldown spawnCooldown;
 
 	void populatePtrViewer(std::vector<T>& objects, std::vector<ICollision*>& out)
 	{
@@ -30,6 +29,8 @@ protected:
 		}
 	}
 public:
+	Cooldown spawnCooldown;
+
 	Spawner(float spawnRate): spawnCooldown(spawnRate){}
 
 	~Spawner() = default;
@@ -59,15 +60,17 @@ public:
 
 		for (size_t i = 0; i < this->objects.size(); i++)
 		{
-			objects[i].update();
+			objects[i].update(deltaTime);
 		}
 	}
 
-	virtual void draw(sf::RenderWindow& window)
+
+	// Inherited via Drawable
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override
 	{
 		for (size_t i = 0; i < this->objects.size(); i++)
 		{
-			window.draw(objects[i]);
+			target.draw(objects[i]);
 		}
 	}
 };

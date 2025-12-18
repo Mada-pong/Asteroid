@@ -28,7 +28,7 @@ public:
 
 	bool isMarkedForRemoval() const { return this->markedForRemoval; };
 
-	virtual void update() = 0;
+	virtual void update(float deltaTime) = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 	//// Inherited via ICollision

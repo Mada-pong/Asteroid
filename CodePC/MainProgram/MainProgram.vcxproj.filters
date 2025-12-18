@@ -28,8 +28,14 @@
     <Filter Include="Source Files\Spawner">
       <UniqueIdentifier>{bcec261a-dc2d-48b3-a026-0d2ee9bd4234}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Projectiles">
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{202788b2-3475-446f-83b0-106657f18e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Projectiles">
       <UniqueIdentifier>{feb3b72b-d198-422c-b8fa-04b46788c727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Components">
+      <UniqueIdentifier>{9df4e73a-a5ef-4ff3-8454-403ebb64ca0e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,32 +45,14 @@
     <ClCompile Include="AsteroidGame.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files\Asteroid Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files\Asteroid Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Asteroid.cpp">
-      <Filter>Source Files\Asteroid Source</Filter>
-    </ClCompile>
     <ClCompile Include="VectorUtilty.cpp">
       <Filter>Source Files\Utility</Filter>
-    </ClCompile>
-    <ClCompile Include="AsteroidSpawner.cpp">
-      <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
     <ClCompile Include="Cooldown.cpp">
       <Filter>Source Files\Utility</Filter>
     </ClCompile>
     <ClCompile Include="ICollision.cpp">
       <Filter>Source Files\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="HealthComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PrintDebug.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CollisionSystem.cpp">
       <Filter>Source Files\Collision</Filter>
@@ -73,7 +61,28 @@
       <Filter>Source Files\Spawner</Filter>
     </ClCompile>
     <ClCompile Include="Projectile.cpp">
-      <Filter>Source Files\Projectiles</Filter>
+      <Filter>Source Files\Objects\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidSpawner.cpp">
+      <Filter>Source Files\Spawner</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Asteroid.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthComponent.cpp">
+      <Filter>Source Files\Objects\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintDebug.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileSpawner.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +135,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Spawner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectileSpawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
