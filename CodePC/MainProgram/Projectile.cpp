@@ -14,12 +14,15 @@ Projectile::Projectile(sf::Vector2f startPosition, sf::Color color, float radius
 	timeToLiveCooldown.start();
 }
 
+void Projectile::update(float deltaTime)
+{
+	timeToLiveCooldown.update(deltaTime);
+	move(direction * velocity);
+}
+
 void Projectile::onHit()
 {
 	PrintDebug::Print("Projectile hit something!");
+	this->setMarkedForRemoval();
 }
 
-void Projectile::update(float deltaTime)
-{
-	move(direction * velocity);
-}

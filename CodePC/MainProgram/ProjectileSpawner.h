@@ -7,7 +7,7 @@
 class ProjectileSpawner : public Spawner<Projectile>
 {
 private: 
-	float timeToLive = 5.0f;
+	float timeToLive = 0.5f;
 	bool canShoot = true;
 
 	// Inherited via Spawner

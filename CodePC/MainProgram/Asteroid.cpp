@@ -1,5 +1,4 @@
 #include "Asteroid.h"
-#include "VectorUtility.h"
 #include "PrintDebug.h"
 
 void Asteroid::update(float deltaTime)
@@ -39,5 +38,6 @@ void Asteroid::onHit()
 	PrintDebug::Print("Asteroid has been hit");
 	healthComponent.reduceHealth(1);
 
-	this->markedForRemoval = true;
+	if (healthComponent.getHealth() <= 0)
+		this->setMarkedForRemoval();
 }

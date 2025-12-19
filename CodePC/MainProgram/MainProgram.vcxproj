@@ -39,8 +39,6 @@
     <ClInclude Include="Asteroid.h" />
     <ClInclude Include="AsteroidGame.h" />
     <ClInclude Include="AsteroidSpawner.h" />
-    <ClInclude Include="Balloon.h" />
-    <ClInclude Include="Character.h" />
     <ClInclude Include="CollisionSystem.h" />
     <ClInclude Include="Cooldown.h" />
     <ClInclude Include="HealthComponent.h" />
@@ -51,8 +49,6 @@
     <ClInclude Include="Spawner.h" />
     <ClInclude Include="VectorUtility.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Obstacle.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

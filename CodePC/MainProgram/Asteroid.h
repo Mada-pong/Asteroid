@@ -20,7 +20,7 @@ private:
 	sf::Vector2f targetDirection; 
 
 	sf::Vector2f screenBorder;
-	sf::Vector2f borderOffset = sf::Vector2f(-400, -500);
+	sf::Vector2f borderOffset = sf::Vector2f(-200, -300);
 
 public: 
 	void update(float deltaTime) override;

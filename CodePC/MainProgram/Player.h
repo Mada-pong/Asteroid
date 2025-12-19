@@ -17,6 +17,8 @@ private:
 
 	float fireRate = .1f;
 
+	sf::Vector2f screenBorder;
+
 	HealthComponent healthComponent;
 	ProjectileSpawner projectileSpawner;
 

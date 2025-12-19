@@ -5,7 +5,6 @@ ProjectileSpawner::ProjectileSpawner(float reloadDuration)
 	: Spawner(reloadDuration)
 {
 	spawnCooldown.setOnFinished([this]() { canShoot = true; });
-	PrintDebug::Print(spawnCooldown.getTime());
 }
 
 void ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition)
@@ -17,7 +16,7 @@ void ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition, float angle, flo
 {
 	if (canShoot)
 	{
-		objects.emplace_back(spawnPosition, sf::Color::Yellow, 4.0f, angle, velocity, timeToLive);
+		objects.emplace_back(std::make_unique<Projectile>(spawnPosition, sf::Color::Yellow, 4.0f, angle, velocity, timeToLive));
 		canShoot = false;
 		spawnCooldown.start();
 	}

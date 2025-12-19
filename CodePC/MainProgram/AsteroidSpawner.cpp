@@ -16,25 +16,26 @@ AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
 
 void AsteroidSpawner::spawnObject(sf::Vector2f spawnPosition)
 {
-	objects.emplace_back(spawnPosition, centerPosition, sf::Color::White, 40, 1, sf::Vector2f(xMax, yMax));
+	objects.emplace_back(std::make_unique<Asteroid>(spawnPosition, centerPosition, sf::Color::White, 40, 1, sf::Vector2f(xMax, yMax)));
 }
 
 void AsteroidSpawner::update(float deltaTime)
 {
 	Spawner::update(deltaTime);
 
-	///TODO: Move the eraser code to a cleanup code
-	objects.erase(std::remove_if(objects.begin(), objects.end(), [](const Asteroid& asteroid)
+	for (size_t i = 0; i < this->objects.size(); i++)
+	{
+		if (objects[i]->isOutside())
 		{
-			return asteroid.isOutside();
-		}),
-		objects.end());
+			objects[i]->setMarkedForRemoval();
+		}
+	}
 }
 
 void AsteroidSpawner::spawnOutsideBorder()
 {
 	//sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
-	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(400);
+	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(200);
 	spawnObject(centerPosition + randomVector);
 }
 

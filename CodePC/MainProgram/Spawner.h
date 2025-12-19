@@ -12,22 +12,32 @@ template <typename T>
 class Spawner : public sf::Drawable
 {
 protected: 
-	std::vector<T> objects;
+	std::vector<std::unique_ptr<T>> objects;
 	std::vector<ICollision*> ptrViewer;
 
 	bool isSpawning = false;
 
-
-	void populatePtrViewer(std::vector<T>& objects, std::vector<ICollision*>& out)
+	void populatePtrViewer(std::vector<std::unique_ptr<T>>& objects, std::vector<ICollision*>& out)
 	{
 		out.clear();
 		out.reserve(objects.size());
 
 		for (size_t i = 0; i < objects.size(); i++)
 		{
-			out.push_back(&objects[i]);
+			out.push_back(objects[i].get());
 		}
 	}
+
+	void removedMarkedForRemovalObjects()
+	{
+		objects.erase(std::remove_if(objects.begin(), objects.end(), [](const std::unique_ptr<T> & object)
+			{
+				return object->isMarkedForRemoval();
+			}),
+			objects.end()
+		);
+	}
+
 public:
 	Cooldown spawnCooldown;
 
@@ -60,8 +70,10 @@ public:
 
 		for (size_t i = 0; i < this->objects.size(); i++)
 		{
-			objects[i].update(deltaTime);
+			objects[i]->update(deltaTime);
 		}
+
+		removedMarkedForRemovalObjects();
 	}
 
 
@@ -70,7 +82,7 @@ public:
 	{
 		for (size_t i = 0; i < this->objects.size(); i++)
 		{
-			target.draw(objects[i]);
+			target.draw(*objects[i]);
 		}
 	}
 };

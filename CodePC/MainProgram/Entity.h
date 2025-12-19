@@ -27,6 +27,7 @@ public:
 	sf::Vector2f getScale() const { return scale; };
 
 	bool isMarkedForRemoval() const { return this->markedForRemoval; };
+	void setMarkedForRemoval() { this->markedForRemoval = true; };
 
 	virtual void update(float deltaTime) = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
