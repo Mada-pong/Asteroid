@@ -6,6 +6,9 @@
 #include <vector>
 #include "Projectile.h"
 #include "ProjectileSpawner.h"
+#include "Scene.h"
+#include "AsteroidGameScene.h"
+#include "SceneID.h"
 
 class AsteroidGame
 {
@@ -18,6 +21,9 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
+	AsteroidGameScene* asteroidGame = new AsteroidGameScene(WIDTH, HEIGHT);
+	Scene* currentScene = asteroidGame;
+
 	CollisionSystem collision;
 
 	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5, sf::Vector2f(WIDTH, HEIGHT));
@@ -28,8 +34,7 @@ private:
 	void handleEvents();
 	void update();
 	void render();
-
-	void objectCleanup();
+	void switchScene(sceneID id);
 public: 
 	AsteroidGame();
 	~AsteroidGame();

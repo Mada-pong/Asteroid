@@ -31,12 +31,11 @@ private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void borderWrap();
 public: 
-	// Inherited via Entity
-	void update(float deltaTime) override;
 	Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Vector2f border);
 
+	// Inherited via Entity
+	void update(float deltaTime) override;
 	void onHit() override;
-	void onDamage(int damage) override;
 
 	ProjectileSpawner& getSpawner();
 };

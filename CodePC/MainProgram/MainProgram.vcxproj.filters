@@ -34,6 +34,12 @@
     <Filter Include="Source Files\Objects\Components">
       <UniqueIdentifier>{9df4e73a-a5ef-4ff3-8454-403ebb64ca0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{2e979f93-3635-46ef-86b6-457da33ba29f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{6e6bcaf8-2bb1-4cde-8f79-d8533a5eff61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -81,6 +87,12 @@
     <ClCompile Include="ProjectileSpawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidGameScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsteroidGame.h">
@@ -124,6 +136,15 @@
     </ClInclude>
     <ClInclude Include="ProjectileSpawner.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidGameScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneID.h">
+      <Filter>Header Files\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -101,14 +101,12 @@ void Player::Turn(float turnRate)
 void Player::onHit()
 {
 	PrintDebug::Print("Player has been hit");
-}
+	healthComponent.reduceHealth(1);
 
-/// <summary>
-/// Collision on hit code. 
-/// </summary>
-void Player::onDamage(int damage)
-{
-	healthComponent.reduceHealth(damage);
+	if (healthComponent.checkIfDead())
+	{
+		setMarkedForRemoval();
+	}
 }
 
 ProjectileSpawner& Player::getSpawner()

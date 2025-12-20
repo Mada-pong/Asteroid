@@ -42,11 +42,12 @@ void AsteroidGame::update()
 		float deltaTime = timePerFrame.asSeconds();
 		elapsedTimeSinceLastUpdate -= timePerFrame;
 
-		player.update(deltaTime);
-		asteroidSpawner->update(deltaTime);
+		currentScene->update(deltaTime);
 
-		collision.CheckCollision(groupA, asteroidSpawner->getObjectPtrs());
-		collision.CheckCollision(player.getSpawner().getObjectPtrs(), asteroidSpawner->getObjectPtrs());
+		if (currentScene->getHasPendingStatus())
+		{
+			switchScene(currentScene->changeTransition());
+		}
 	}
 }
 
@@ -54,11 +55,13 @@ void AsteroidGame::render()
 {
 	this->window.clear();
 
-	this->window.draw(this->player);
-	this->window.draw(*this->asteroidSpawner);
+	currentScene->draw(this->window);
+
 	this->window.display();
 }
 
-void AsteroidGame::objectCleanup()
+void AsteroidGame::switchScene(sceneID id)
 {
+
 }
+

@@ -1,3 +1,76 @@
-﻿  Player.cpp
-C:\git hub repo\Asteroid\CodePC\MainProgram\Player.cpp(5,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+﻿  AsteroidGame.cpp
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         ]
+  (compiling source file 'AsteroidGame.cpp')
+  
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         ]
+  (compiling source file 'AsteroidGame.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         ]
+  (compiling source file 'AsteroidGame.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56):
+      the template instantiation context (the oldest one first) is
+          C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(25,58):
+          see reference to function template instantiation 'std::unique_ptr<AsteroidSpawner,std::default_delete<AsteroidSpawner>> std::make_unique<AsteroidSpawner,const int&,const int&,int,0>(const int &,const int &,int &&)' being compiled
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  (compiling source file 'AsteroidGame.cpp')
+  
+  AsteroidGameScene.cpp
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         ]
+  (compiling source file 'AsteroidGameScene.cpp')
+  
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         ]
+  (compiling source file 'AsteroidGameScene.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244:         ]
+  (compiling source file 'AsteroidGameScene.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56):
+      the template instantiation context (the oldest one first) is
+          C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(25,58):
+          see reference to function template instantiation 'std::unique_ptr<AsteroidSpawner,std::default_delete<AsteroidSpawner>> std::make_unique<AsteroidSpawner,const int&,const int&,int,0>(const int &,const int &,int &&)' being compiled
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3630,56): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  (compiling source file 'AsteroidGameScene.cpp')
+  
+  Scene.cpp
+  Source.cpp
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,88): warning C4244:         ]
+  (compiling source file 'Source.cpp')
+  
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         with
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         [
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:             T=float
+C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.h(22,81): warning C4244:         ]
+  (compiling source file 'Source.cpp')
+  
+  Generating Code...
   MainProgram.vcxproj -> C:\git hub repo\Asteroid\Bin\x64\TemplateD.exe
