@@ -1,8 +1,16 @@
 #include "Player.h"
 #include "PrintDebug.h"
 
+Player::Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Vector2f border)
+	: Entity(startPosition, color, radius), healthComponent(health), projectileSpawner(fireRate), screenBorder(border)
+{
+	this->setScale(sf::Vector2f(0.7f, 2));
+	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
+}
+
 void Player::update(float deltaTime)
 {
+	borderWrap();
 	Input();
 
 	projectileSpawner.update(deltaTime);
@@ -15,13 +23,28 @@ void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	projectileSpawner.draw(target, states);
 }
 
-Player::Player(sf::Vector2f startPosition, sf::Color color, float radius)
-	: Entity(startPosition, color, radius), healthComponent(health), projectileSpawner(fireRate)
+void Player::borderWrap()
 {
-	this->setScale(sf::Vector2f(0.7f, 2));
-	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
-}
+	if (getPosition().y < 0 - borderOffset)
+	{
+		setPosition(sf::Vector2f(getPosition().x, screenBorder.y));
+	}
 
+	if (screenBorder.y + borderOffset < getPosition().y)
+	{
+		setPosition(sf::Vector2f(getPosition().x, 0));
+	}
+
+	if (getPosition().x < 0 - borderOffset)
+	{
+		setPosition(sf::Vector2f(screenBorder.x, getPosition().y));
+	}
+
+	if (screenBorder.x + borderOffset < getPosition().x)
+	{
+		setPosition(sf::Vector2f(0, getPosition().y));
+	}
+}
 
 void Player::Input()
 {

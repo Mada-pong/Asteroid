@@ -1,5 +1,6 @@
 c:\git hub repo\asteroid\obj\x64\template\debug\vc143.pdb
 c:\git hub repo\asteroid\obj\x64\template\debug\vc143.idb
+c:\git hub repo\asteroid\obj\x64\template\debug\player.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\entity.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\vectorutilty.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\spawner.obj
@@ -8,6 +9,8 @@ c:\git hub repo\asteroid\obj\x64\template\debug\icollision.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\healthcomponent.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\cooldown.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\collisionsystem.obj
+c:\git hub repo\asteroid\obj\x64\template\debug\asteroidspawner.obj
+c:\git hub repo\asteroid\obj\x64\template\debug\projectilespawner.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\projectile.obj
 c:\git hub repo\asteroid\obj\x64\template\debug\asteroid.obj
 c:\git hub repo\asteroid\codepc\../obj/x64/template/debug/mainprogram.vcxproj.filelistabsolute.txt

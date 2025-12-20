@@ -43,7 +43,7 @@ void AsteroidGame::update()
 		elapsedTimeSinceLastUpdate -= timePerFrame;
 
 		player.update(deltaTime);
-		//asteroidSpawner->update(deltaTime);
+		asteroidSpawner->update(deltaTime);
 
 		collision.CheckCollision(groupA, asteroidSpawner->getObjectPtrs());
 		collision.CheckCollision(player.getSpawner().getObjectPtrs(), asteroidSpawner->getObjectPtrs());

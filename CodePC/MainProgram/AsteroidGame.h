@@ -20,7 +20,7 @@ private:
 
 	CollisionSystem collision;
 
-	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5);
+	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5, sf::Vector2f(WIDTH, HEIGHT));
 	std::vector<ICollision*> groupA{&player};
 
 	std::unique_ptr<AsteroidSpawner> asteroidSpawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, 5);

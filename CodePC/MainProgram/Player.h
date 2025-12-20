@@ -18,6 +18,7 @@ private:
 	float fireRate = .1f;
 
 	sf::Vector2f screenBorder;
+	int borderOffset = 50;
 
 	HealthComponent healthComponent;
 	ProjectileSpawner projectileSpawner;
@@ -28,10 +29,11 @@ private:
 	void Side(float speed);
 	void Turn(float turnRadius);
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	void borderWrap();
 public: 
 	// Inherited via Entity
 	void update(float deltaTime) override;
-	Player(sf::Vector2f startPosition, sf::Color color, float radius);
+	Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Vector2f border);
 
 	void onHit() override;
 	void onDamage(int damage) override;
