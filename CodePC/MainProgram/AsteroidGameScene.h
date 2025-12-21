@@ -1,3 +1,6 @@
+#ifndef ASTEROIDGAMESCENE_HPP
+#define ASTEROIDGAMESCENE_HPP
+
 #include "Scene.h"
 #include <SFML/Graphics.hpp>
 #include "AsteroidSpawner.h"
@@ -28,3 +31,4 @@ private:
 	sceneID changeTransition() override;
 };
 
+#endif // !1

@@ -7,6 +7,12 @@
 *.o
 *.obj
 
+# Build output
+Obj/
+x64/
+Debug/
+Release/
+
 # Precompiled Headers
 *.gch
 *.pch

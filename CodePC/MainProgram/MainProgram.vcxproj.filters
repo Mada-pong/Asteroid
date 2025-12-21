@@ -45,7 +45,7 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
-    <ClCompile Include="AsteroidGame.cpp">
+    <ClCompile Include="SceneManager.cpp">
       <Filter>Source Files\Asteroid Source</Filter>
     </ClCompile>
     <ClCompile Include="VectorUtilty.cpp">
@@ -91,6 +91,9 @@
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="AsteroidGameScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverScene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -144,6 +147,9 @@
       <Filter>Header Files\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="SceneID.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverScene.h">
       <Filter>Header Files\Scenes</Filter>
     </ClInclude>
   </ItemGroup>

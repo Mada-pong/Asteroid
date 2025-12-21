@@ -5,7 +5,7 @@ AsteroidGameScene::AsteroidGameScene(int width, int height)
 {
 }
 
-void AsteroidGameScene::update(float& deltaTime)
+void AsteroidGameScene::update(float deltaTime)
 {
 	player.update(deltaTime);
 	asteroidSpawner->update(deltaTime);

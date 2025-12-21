@@ -1,10 +1,11 @@
 C:\git hub repo\Asteroid\CodePC\MainProgram\Asteroid.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Asteroid.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGameScene.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\AsteroidGameScene.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\GameOverScene.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\GameOverScene.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Projectile.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Projectile.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\ProjectileSpawner.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\ProjectileSpawner.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Scene.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Scene.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Source.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Source.obj
-C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidGame.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\AsteroidGame.obj
+C:\git hub repo\Asteroid\CodePC\MainProgram\SceneManager.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\SceneManager.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\AsteroidSpawner.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\AsteroidSpawner.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\CollisionSystem.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\CollisionSystem.obj
 C:\git hub repo\Asteroid\CodePC\MainProgram\Cooldown.cpp;C:\git hub repo\Asteroid\Obj\x64\Template\Debug\Cooldown.obj
