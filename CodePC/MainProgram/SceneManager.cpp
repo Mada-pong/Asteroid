@@ -1,4 +1,4 @@
-#include "AsteroidGame.h"
+#include "SceneManager.h"
 
 SceneManager::SceneManager()
 	: window(sf::VideoMode(WIDTH, HEIGHT), "Asteroid"),

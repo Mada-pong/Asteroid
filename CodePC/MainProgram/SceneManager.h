@@ -19,7 +19,7 @@ private:
 	sf::Time elapsedTimeSinceLastUpdate;
 
 	std::map<sceneID, Scene*> sceneMap = { 
-		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT)}
+		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT) }
 	};
 
 	Scene* currentScene = sceneMap[sceneID::ASTEROIDGAME];
