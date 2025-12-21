@@ -12,6 +12,11 @@ void AsteroidGameScene::update(float deltaTime)
 
 	collision.CheckCollision(groupA, asteroidSpawner->getObjectPtrs());
 	collision.CheckCollision(player.getSpawner().getObjectPtrs(), asteroidSpawner->getObjectPtrs());
+
+	if (player.getHealthComponent().getHealth() <= 0)
+	{
+		changeTransition();
+	}
 }
 
 void AsteroidGameScene::draw(sf::RenderWindow& window)

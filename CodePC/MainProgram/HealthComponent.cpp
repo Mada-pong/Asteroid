@@ -10,6 +10,7 @@ HealthComponent::HealthComponent(int health, int maxHealth)
 {
 }
 
+/// Get current health
 int HealthComponent::getHealth() const
 {
 	return this->health;
@@ -26,11 +27,8 @@ void HealthComponent::setHealth(int newHealth)
 	this->maxHealth = newHealth;
 }
 
-/// <summary>
 /// Add health on top of the current health. 
 /// In practice it is the same as getHealth() + added health.
-/// </summary>
-/// <param name="health"></param>
 void HealthComponent::addHealth(int health)
 {
 	this->health += health;

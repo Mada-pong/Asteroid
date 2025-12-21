@@ -2,10 +2,12 @@
 #include "PrintDebug.h"
 
 Player::Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Vector2f border)
-	: Entity(startPosition, color, radius), healthComponent(health), projectileSpawner(fireRate), screenBorder(border)
+	: Entity(startPosition, color, radius), healthComponent(health), projectileSpawner(fireRate), screenBorder(border), IFrameCooldown(iFrameDuration)
 {
 	this->setScale(sf::Vector2f(0.7f, 2));
 	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
+
+	IFrameCooldown.setOnFinished([this]() { this->isInvincible = false; });
 }
 
 void Player::update(float deltaTime)
@@ -13,6 +15,7 @@ void Player::update(float deltaTime)
 	borderWrap();
 	Input();
 
+	IFrameCooldown.update(deltaTime);
 	projectileSpawner.update(deltaTime);
 }
 
@@ -100,16 +103,18 @@ void Player::Turn(float turnRate)
 
 void Player::onHit()
 {
-	PrintDebug::Print("Player has been hit");
-	healthComponent.reduceHealth(1);
+	if (!this->isInvincible)
+	{
+		healthComponent.reduceHealth(1);
+		this->isInvincible = true;
+		IFrameCooldown.start();
+	}
+
+	PrintDebug::Print("Player HP: ");
+	PrintDebug::Print(healthComponent.getHealth());
 
 	if (healthComponent.checkIfDead())
 	{
 		setMarkedForRemoval();
 	}
-}
-
-ProjectileSpawner& Player::getSpawner()
-{
-	return projectileSpawner;
 }

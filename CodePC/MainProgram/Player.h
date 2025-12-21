@@ -5,6 +5,7 @@
 #include "HealthComponent.h"
 #include <SFML/Graphics.hpp>
 #include "ProjectileSpawner.h"
+#include "Cooldown.h"
 
 class Player : public Entity
 {
@@ -12,13 +13,17 @@ private:
 	float baseSpeed = 5;
 	float baseRotationSpeed = 10;
 	float rotationOffset = 90;
+	float iFrameDuration = 0.5f;
 
 	float health = 3;
-
 	float fireRate = .1f;
+
+	bool isInvincible = false;
 
 	sf::Vector2f screenBorder;
 	int borderOffset = 50;
+
+	Cooldown IFrameCooldown;
 
 	HealthComponent healthComponent;
 	ProjectileSpawner projectileSpawner;
@@ -37,7 +42,8 @@ public:
 	void update(float deltaTime) override;
 	void onHit() override;
 
-	ProjectileSpawner& getSpawner();
+	ProjectileSpawner& getSpawner() { return projectileSpawner; };
+	HealthComponent& getHealthComponent() { return healthComponent; };
 };
 
 #endif // !PLAYER_HPP

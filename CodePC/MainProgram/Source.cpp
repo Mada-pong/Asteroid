@@ -1,4 +1,4 @@
-#include "AsteroidGame.h"
+#include "SceneManager.h"
 
 #ifdef _DEBUG
 #pragma comment(lib, "sfml-window-d.lib")

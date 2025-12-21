@@ -3,20 +3,20 @@
 
 class HealthComponent
 {
-private: 
+private:
 	int health;
 	int maxHealth;
 	bool isDead = false;
 
-public: 
+public:
 	HealthComponent(int health);
 	HealthComponent(int health, int maxHealth);
 
 	int getHealth() const;
-	int getMaxHealth() const; 
+	int getMaxHealth() const;
 
 	void setHealth(int newHealth);
-	void addHealth(int health); 
+	void addHealth(int health);
 	void reduceHealth(int health);
 
 	bool checkIfDead();

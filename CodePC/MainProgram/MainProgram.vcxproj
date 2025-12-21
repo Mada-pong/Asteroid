@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asteroid.h" />
-    <ClInclude Include="AsteroidGame.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="AsteroidGameScene.h" />
     <ClInclude Include="AsteroidSpawner.h" />
     <ClInclude Include="CollisionSystem.h" />
