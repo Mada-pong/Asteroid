@@ -7,6 +7,7 @@
 #include "Cooldown.h"
 #include "Asteroid.h"
 #include "Projectile.h"
+#include <functional>
 
 template <typename T>
 class Spawner : public sf::Drawable
@@ -45,7 +46,7 @@ public:
 
 	~Spawner() = default;
 
-	virtual void AsteroidspawnObject(sf::Vector2f spawnPosition) = 0;
+	virtual T* spawnObject(sf::Vector2f spawnPosition) = 0;
 
 	virtual void setSpawnRate(float duration)
 	{

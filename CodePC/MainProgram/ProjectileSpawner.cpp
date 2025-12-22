@@ -7,17 +7,23 @@ ProjectileSpawner::ProjectileSpawner(float reloadDuration)
 	spawnCooldown.setOnFinished([this]() { canShoot = true; });
 }
 
-void ProjectileSpawner::AsteroidspawnObject(sf::Vector2f spawnPosition)
+Projectile* ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition)
 {
 	spawnObject(spawnPosition, 90, 1);
+
+	return objects.back().get();
 }
 
-void ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition, float angle, float velocity)
+Projectile* ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition, float angle, float velocity)
 {
 	if (canShoot)
 	{
 		objects.emplace_back(std::make_unique<Projectile>(spawnPosition, sf::Color::Yellow, 4.0f, angle, velocity, timeToLive));
 		canShoot = false;
 		spawnCooldown.start();
+
+		return objects.back().get();
 	}
+
+	return nullptr;
 }
