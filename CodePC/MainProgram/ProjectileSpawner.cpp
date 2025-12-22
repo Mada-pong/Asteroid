@@ -14,16 +14,15 @@ Projectile* ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition)
 	return objects.back().get();
 }
 
+///TODO: Change so that this doesn't 
 Projectile* ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition, float angle, float velocity)
 {
-	if (canShoot)
-	{
-		objects.emplace_back(std::make_unique<Projectile>(spawnPosition, sf::Color::Yellow, 4.0f, angle, velocity, timeToLive));
-		canShoot = false;
-		spawnCooldown.start();
+	if (!canShoot)
+		return;
 
-		return objects.back().get();
-	}
+	objects.emplace_back(std::make_unique<Projectile>(spawnPosition, sf::Color::Yellow, 4.0f, angle, velocity, timeToLive));
+	canShoot = false;
+	spawnCooldown.start();
 
-	return nullptr;
+	return objects.back().get();
 }
