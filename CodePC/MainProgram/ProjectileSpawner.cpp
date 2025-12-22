@@ -7,7 +7,7 @@ ProjectileSpawner::ProjectileSpawner(float reloadDuration)
 	spawnCooldown.setOnFinished([this]() { canShoot = true; });
 }
 
-void ProjectileSpawner::spawnObject(sf::Vector2f spawnPosition)
+void ProjectileSpawner::AsteroidspawnObject(sf::Vector2f spawnPosition)
 {
 	spawnObject(spawnPosition, 90, 1);
 }

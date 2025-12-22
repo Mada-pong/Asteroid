@@ -4,7 +4,7 @@
 #include "Entity.h"
 #include <SFML/Graphics.hpp>
 #include "HealthComponent.h"
-
+#include <functional>
 
 //TODO: Remove hard coded values and put it into a file maybe? 
 class Asteroid : public Entity
@@ -22,6 +22,8 @@ private:
 	sf::Vector2f screenBorder;
 	sf::Vector2f borderOffset = sf::Vector2f(-200, -300);
 
+	std::function<void(int)> onDied;
+
 public: 
 	void update(float deltaTime) override;
 	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, float speed, sf::Vector2f screenBorder);
@@ -31,6 +33,8 @@ public:
 
 	void onDamage(int damage) override;
 	void onHit() override;
+
+	void setOnDied(std::function<void(int)> function);
 };
 
 #endif // !ASTEROID_HPP

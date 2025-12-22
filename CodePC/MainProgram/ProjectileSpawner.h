@@ -11,7 +11,7 @@ private:
 	bool canShoot = true;
 
 	// Inherited via Spawner
-	void spawnObject(sf::Vector2f spawnPosition) override;
+	void AsteroidspawnObject(sf::Vector2f spawnPosition) override;
 public:
 	ProjectileSpawner(float reloadDuration);
 	~ProjectileSpawner() = default;

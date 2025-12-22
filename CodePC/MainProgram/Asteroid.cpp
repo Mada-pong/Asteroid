@@ -35,9 +35,20 @@ void Asteroid::onDamage(int damage)
 
 void Asteroid::onHit()
 {
+	if (isMarkedForRemoval()) return;
+
 	PrintDebug::Print("Asteroid has been hit");
 	healthComponent.reduceHealth(1);
 
 	if (healthComponent.getHealth() <= 0)
+	{
+		if (onDied) onDied(1);
+
 		this->setMarkedForRemoval();
+	}
+}
+
+void Asteroid::setOnDied(std::function<void(int)> function)
+{
+	onDied = std::move(function);
 }

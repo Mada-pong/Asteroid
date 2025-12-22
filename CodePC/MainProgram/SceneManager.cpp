@@ -46,6 +46,8 @@ void SceneManager::update()
 
 		if (currentScene->getHasPendingStatus())
 		{
+			PrintDebug::Print("Switching Scenes " + std::to_string(currentScene->changeTransition()));
+
 			switchScene(currentScene->changeTransition());
 		}
 	}

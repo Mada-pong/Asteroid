@@ -45,7 +45,7 @@ public:
 
 	~Spawner() = default;
 
-	virtual void spawnObject(sf::Vector2f spawnPosition) = 0;
+	virtual void AsteroidspawnObject(sf::Vector2f spawnPosition) = 0;
 
 	virtual void setSpawnRate(float duration)
 	{

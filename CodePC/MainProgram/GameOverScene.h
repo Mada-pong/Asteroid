@@ -14,6 +14,10 @@ public:
 
 private: 
 	sceneID changeTransition() override;
+
+	sf::Font font;
+	sf::Text gameOverText;
+	sf::Text score;
 };
 
 #endif // !GAMEOVERSCENE_HPP

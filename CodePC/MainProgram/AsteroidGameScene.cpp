@@ -1,7 +1,7 @@
 #include "AsteroidGameScene.h"
 
 AsteroidGameScene::AsteroidGameScene(int width, int height)
-	: Scene(width, height)
+	: Scene(width, height), asteroidSpawningCooldown(asteroidSpawnRate)
 {
 }
 
@@ -27,5 +27,6 @@ void AsteroidGameScene::draw(sf::RenderWindow& window)
 
 sceneID AsteroidGameScene::changeTransition()
 {
+	this->hasPendingTransition = true;
 	return sceneID::GAMEOVER;
 }

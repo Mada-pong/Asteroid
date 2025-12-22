@@ -84,9 +84,6 @@
     <ClCompile Include="PrintDebug.cpp">
       <Filter>Source Files\Utility</Filter>
     </ClCompile>
-    <ClCompile Include="ProjectileSpawner.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
@@ -95,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="GameOverScene.cpp">
       <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileSpawner.cpp">
+      <Filter>Source Files\Spawner</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

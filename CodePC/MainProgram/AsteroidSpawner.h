@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Cooldown.h"
 #include "Spawner.h"
+#include <functional>
 
 class AsteroidSpawner : public Spawner<Asteroid>
 {
@@ -23,7 +24,7 @@ public:
 	void spawnOutsideBorder();
 	void setBoundary(float xMin, float xMax, float yMin, float yMax);
 
-	void spawnObject(sf::Vector2f spawnPosition) override;
+	void AsteroidspawnObject(sf::Vector2f spawnPosition) override;
 	void update(float deltaTime) override;
 };
 

@@ -4,8 +4,11 @@
 #include <SFML/Graphics.hpp>
 #include "Scene.h"
 #include "AsteroidGameScene.h"
+#include "GameOverScene.h"
 #include "SceneID.h"
 #include <map>
+#include "PrintDebug.h"
+
 
 class SceneManager
 {
@@ -18,8 +21,11 @@ private:
 	sf::Time timePerFrame;
 	sf::Time elapsedTimeSinceLastUpdate;
 
+	int score;
+
 	std::map<sceneID, Scene*> sceneMap = { 
-		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT) }
+		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT) },
+		{ sceneID::GAMEOVER, new GameOverScene(WIDTH, HEIGHT)}
 	};
 
 	Scene* currentScene = sceneMap[sceneID::ASTEROIDGAME];

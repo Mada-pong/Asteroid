@@ -9,10 +9,10 @@
 #include "Projectile.h"
 #include "ProjectileSpawner.h"
 #include "Player.h"
+#include "Cooldown.h"
 
 class AsteroidGameScene : public Scene
 {
-
 public:
 	AsteroidGameScene(int width, int height);
 
@@ -20,6 +20,9 @@ public:
 	void update(float deltaTime) override;
 	void draw(sf::RenderWindow& window) override;
 private:
+	float asteroidSpawnRate = 0.5f;
+
+	Cooldown asteroidSpawningCooldown;
 	CollisionSystem collision;
 
 	Player player = Player(sf::Vector2f(100, 100), sf::Color::Red, 5, sf::Vector2f(WIDTH, HEIGHT));
