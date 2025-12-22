@@ -19,11 +19,13 @@ private:
 	float fireRate = .1f;
 
 	bool isInvincible = false;
+	bool canShoot = true;
 
 	sf::Vector2f screenBorder;
 	int borderOffset = 50;
 
-	Cooldown IFrameCooldown;
+	Cooldown iFrameCooldown;
+	Cooldown shootingCooldown;
 
 	HealthComponent healthComponent;
 	ProjectileSpawner projectileSpawner;
@@ -34,6 +36,7 @@ private:
 	void Side(float speed);
 	void Turn(float turnRadius);
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	void shoot();
 	void borderWrap();
 public: 
 	Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Vector2f border);
