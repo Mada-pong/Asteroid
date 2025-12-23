@@ -9,6 +9,7 @@ SceneManager::SceneManager()
 
 SceneManager::~SceneManager()
 {
+	delete currentScene;
 }
 
 void SceneManager::run()
@@ -66,5 +67,6 @@ void SceneManager::switchScene(sceneID id)
 {
 	delete currentScene;
 	currentScene = sceneMap[id];
+	currentScene->onEnterScene();
 }
 

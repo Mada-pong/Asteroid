@@ -24,8 +24,8 @@ private:
 	int score;
 
 	std::map<sceneID, Scene*> sceneMap = { 
-		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT) },
-		{ sceneID::GAMEOVER, new GameOverScene(WIDTH, HEIGHT)}
+		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT, score) },
+		{ sceneID::GAMEOVER, new GameOverScene(WIDTH, HEIGHT, score)}
 	};
 
 	Scene* currentScene = sceneMap[sceneID::ASTEROIDGAME];

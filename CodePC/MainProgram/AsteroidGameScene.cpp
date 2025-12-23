@@ -1,8 +1,13 @@
 #include "AsteroidGameScene.h"
 
-AsteroidGameScene::AsteroidGameScene(int width, int height)
-	: Scene(width, height), asteroidSpawningCooldown(asteroidSpawnRate)
+AsteroidGameScene::AsteroidGameScene(int width, int height, int& score)
+	: Scene(width, height), score(score)
 {
+	asteroidSpawner->getCooldown().setOnFinished([this]() {
+		asteroidSetup();
+		});
+
+	asteroidSpawner->getCooldown().start();
 }
 
 void AsteroidGameScene::update(float deltaTime)
@@ -10,12 +15,12 @@ void AsteroidGameScene::update(float deltaTime)
 	player.update(deltaTime);
 	asteroidSpawner->update(deltaTime);
 
-	collision.CheckCollision(groupA, asteroidSpawner->getObjectPtrs());
+	collision.CheckCollision(playerGroup, asteroidSpawner->getObjectPtrs());
 	collision.CheckCollision(player.getSpawner().getObjectPtrs(), asteroidSpawner->getObjectPtrs());
 
 	if (player.getHealthComponent().getHealth() <= 0)
 	{
-		changeTransition();
+		this->hasPendingTransition = true;
 	}
 }
 
@@ -27,6 +32,20 @@ void AsteroidGameScene::draw(sf::RenderWindow& window)
 
 sceneID AsteroidGameScene::changeTransition()
 {
-	this->hasPendingTransition = true;
 	return sceneID::GAMEOVER;
+}
+
+void AsteroidGameScene::asteroidSetup()
+{
+	Asteroid* asteroidPtr = asteroidSpawner->spawnOutsideBorder();
+
+	asteroidPtr->setOnDied([this](int) {
+		this->score += 10;
+		});
+
+	asteroidSpawner->spawnCooldown.start();
+}
+
+void AsteroidGameScene::onEnterScene()
+{
 }

@@ -8,9 +8,6 @@ AsteroidSpawner::AsteroidSpawner(float xWidth, float yHeight, float spawnRate)
 
 	yMin = 0; 
 	yMax = yHeight;
-
-	spawnCooldown.setOnFinished([this]() { spawnOutsideBorder(); spawnCooldown.start(); });
-	spawnCooldown.start();
 }
 
 void AsteroidSpawner::update(float deltaTime)
@@ -33,10 +30,10 @@ Asteroid* AsteroidSpawner::spawnObject(sf::Vector2f spawnPosition)
 	return objects.back().get();
 }
 
-void AsteroidSpawner::spawnOutsideBorder()
+Asteroid* AsteroidSpawner::spawnOutsideBorder()
 {
 	sf::Vector2f randomVector = VectorUtility::randomUnitVector() * float(outsideBorderRadius);
-	spawnObject(centerPosition + randomVector);
+	return spawnObject(centerPosition + randomVector);
 }
 
 void AsteroidSpawner::setBoundary(float xMin, float xMax, float yMin, float yMax)

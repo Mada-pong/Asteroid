@@ -44,7 +44,15 @@ public:
 
 	Spawner(float spawnRate): spawnCooldown(spawnRate){}
 
-	~Spawner() = default;
+	~Spawner() 
+	{
+		for (size_t i = 0; i < ptrViewer.size(); i++)
+		{
+			delete ptrViewer[i];
+		}
+	}
+
+	virtual Cooldown& getCooldown() { return this->spawnCooldown; }
 
 	virtual T* spawnObject(sf::Vector2f spawnPosition) = 0;
 

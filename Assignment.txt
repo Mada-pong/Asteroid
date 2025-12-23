@@ -1,0 +1,57 @@
+Grundkrav (ger betyget E)
+
+        Ett visst antal, minst 5, egendefinierade relevanta klasser, vilka på förhand ska vara godkända av lärare
+		
+		Ja
+		
+        Flera objekt av någon av de egendefinierade klasserna ska finnas och ska hanteras i en behållare (array, vector, ...).
+		
+		Spawner class använder vector
+		
+        Egendefinierat logiskt och rimligt arv med abstrakt klass/er
+		
+		SpawnerAsteroid är ett arv av spawner
+		
+        Överskuggning och dynamisk bindning på ett lämpligt och relevant sätt
+		
+		Ja, antagligen
+		
+        Rimlig användning av dynamisk minneshantering (genom användande av new och delete)
+		
+		Ja
+		
+        Någon datastruktur från standardbiblioteket (vector, stack, kö, ...)
+		
+		Vector
+		
+        Läsning från och/eller skrivning till textfiler
+		
+		Ja, sparar score i slutet av spelet
+
+Tilläggskrav för högre betyg: 
+
+Varje tilläggskrav nedan är värda ett antal poäng
+
+        Egendefinerad rimlig generisk klass som används på ett relevant sätt:  2 poäng
+		
+		Spawner är en generisk class
+		
+        Relevant användande av funktionspekare: 1 poäng
+		
+		
+		
+        Relevant användande av Lamdautryck :  1 poäng
+		
+		Ja, för cooldown och asteroid setOnDied
+		
+        Användande av undantagshantering där detta är lämpligt : 1 poäng
+		
+		Nej
+		
+        Användande av smarta pekare där detta är lämpligt: 1 poäng
+		
+		Ja, unique_ptr
+		
+        Grafiskt användargränssnitt (ex-vis SFML Länkar till en extern sida. ) : 4 poäng
+		
+		Ja

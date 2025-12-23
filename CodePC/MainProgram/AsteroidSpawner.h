@@ -21,7 +21,7 @@ public:
 	AsteroidSpawner(float xWidth, float yHeight, float spawnRate);
 	~AsteroidSpawner() = default;
 
-	void spawnOutsideBorder();
+	Asteroid* spawnOutsideBorder();
 	void setBoundary(float xMin, float xMax, float yMin, float yMax);
 
 	Asteroid* spawnObject(sf::Vector2f spawnPosition) override;
