@@ -44,13 +44,7 @@ public:
 
 	Spawner(float spawnRate): spawnCooldown(spawnRate){}
 
-	~Spawner() 
-	{
-		for (size_t i = 0; i < ptrViewer.size(); i++)
-		{
-			delete ptrViewer[i];
-		}
-	}
+	virtual ~Spawner() = default;
 
 	virtual Cooldown& getCooldown() { return this->spawnCooldown; }
 
