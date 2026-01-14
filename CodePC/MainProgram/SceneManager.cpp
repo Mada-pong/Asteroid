@@ -5,6 +5,7 @@ SceneManager::SceneManager()
 	timePerFrame(sf::seconds(1.f / 60.f)),
 	elapsedTimeSinceLastUpdate(sf::Time::Zero)
 {
+	window.setVerticalSyncEnabled(true);
 }
 
 SceneManager::~SceneManager()

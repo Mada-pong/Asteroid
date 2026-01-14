@@ -26,7 +26,6 @@ private:
 	sf::Color playerColor = sf::Color::Red;
 	float playerSize = 5;
 
-
 	CollisionSystem collision;
 
 	Player player = Player(playerStartPosition, playerColor, playerSize, borderLimit);
