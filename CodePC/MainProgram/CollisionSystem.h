@@ -12,7 +12,6 @@ public:
 	~CollisionSystem() = default;
 };
 
-
 #endif
 
 

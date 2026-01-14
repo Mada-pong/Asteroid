@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VECTORUTILITY_HPP
+#define VECTORUTILITY_HPP
 
 #include <cmath>
 #include <SFML/Graphics.hpp>
@@ -24,3 +25,4 @@ public:
 	static sf::Vector2f randomUnitVector();
 };
 
+#endif

@@ -99,4 +99,4 @@ public:
 	}
 };
 
-#endif // !SPAWNER_HPP
+#endif

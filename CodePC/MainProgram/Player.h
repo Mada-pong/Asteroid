@@ -49,4 +49,4 @@ public:
 	HealthComponent& getHealthComponent() { return healthComponent; };
 };
 
-#endif // !PLAYER_HPP
+#endif

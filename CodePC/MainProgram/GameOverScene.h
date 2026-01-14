@@ -6,7 +6,6 @@
 #include <chrono>
 #include <format>
 
-
 class GameOverScene : public Scene
 {
 public:

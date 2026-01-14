@@ -18,4 +18,4 @@ public:
 	Projectile* spawnObject(sf::Vector2f spawnPosition, float angle, float velocity);
 };
 
-#endif // !PROJECTILESPAWNER_HPP
+#endif

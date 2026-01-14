@@ -24,4 +24,4 @@ public:
 	void update(float deltaTime) override;
 };
 
-#endif // !ASTEROIDSPAWNER_HPP
+#endif

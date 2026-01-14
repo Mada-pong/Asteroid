@@ -41,4 +41,4 @@ private:
 	void onEnterScene() override;
 };
 
-#endif // !1
+#endif

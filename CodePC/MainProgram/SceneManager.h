@@ -39,4 +39,4 @@ public:
 	void run();
 };
 
-#endif // !SCENEMANAGER_HPP
+#endif

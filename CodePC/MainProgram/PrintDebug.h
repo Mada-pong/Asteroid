@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PRINTDEBUG_HPP
+#define PRINTDEBUG_HPP
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <string>
@@ -12,3 +14,4 @@ public:
 	static void Print(float number);
 };
 
+#endif

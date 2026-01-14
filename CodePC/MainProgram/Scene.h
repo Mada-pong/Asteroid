@@ -24,4 +24,4 @@ protected:
 	const int HEIGHT; 
 };
 
-#endif // !SCENE_HPP
+#endif

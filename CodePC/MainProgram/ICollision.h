@@ -16,4 +16,4 @@ public:
 	virtual void onHit() = 0;
 };
 
-#endif // !ICOLLISION_HPP
+#endif
