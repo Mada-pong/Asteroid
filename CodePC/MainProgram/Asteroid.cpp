@@ -1,5 +1,6 @@
 #include "Asteroid.h"
 #include "PrintDebug.h"
+#include "VectorUtility.h"
 
 void Asteroid::update(float deltaTime)
 {

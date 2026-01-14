@@ -1,7 +1,6 @@
 #include "Projectile.h"
 #include "PrintDebug.h"
 
-
 Projectile::Projectile(sf::Vector2f startPosition, sf::Color color, float radius, float angle, float velocity, float timeToLive)
 	: Entity(startPosition, color, radius), timeToLiveCooldown(timeToLive), velocity(velocity)
 {

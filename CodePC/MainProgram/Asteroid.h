@@ -11,7 +11,6 @@ class Asteroid : public Entity
 {
 private: 
 	float baseSpeed = 1;
-	float baseRotationSpeed = 10;
 	float baseHP = 3;
 
 	HealthComponent healthComponent;
@@ -23,12 +22,10 @@ private:
 	sf::Vector2f borderOffset = sf::Vector2f(-200, -300);
 
 	std::function<void(int)> onDied;
-
 public: 
 	void update(float deltaTime) override;
 	Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::Color color, float size, float speed, sf::Vector2f screenBorder);
 
-	void isDead() const;
 	bool isOutside() const;
 
 	void onDamage(int damage) override;

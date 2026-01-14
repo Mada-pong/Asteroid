@@ -1,7 +1,7 @@
 #include "GameOverScene.h"
 #include "PrintDebug.h"
 
-GameOverScene::GameOverScene(int width, int height, int& score)
+GameOverScene::GameOverScene(int width, int height, int* score)
 	: Scene(width, height), score(score)
 {
 	font.loadFromFile("../Font/arial.ttf");
@@ -9,7 +9,7 @@ GameOverScene::GameOverScene(int width, int height, int& score)
 	displayText(gameOverText, "GAME OVER!");
 	gameOverText.setPosition(width / 2, height / 2);
 
-	displayText(scoreText, std::to_string(this->score));
+	displayText(scoreText, std::to_string(*this->score));
 	scoreText.setPosition(width / 2, height / 2 + 30);
 }
 
@@ -31,14 +31,14 @@ void GameOverScene::saveScoreToFile()
 	auto now = std::chrono::system_clock::now();
 	std::string formattedTime = std::format("{:%Y-%m-%d %H:%M:%S}", now);
 
-	file << "Time: " << formattedTime << " - Score: " << std::to_string(this->score) << std::endl;
+	file << "Time: " << formattedTime << " - Score: " << std::to_string(*this->score) << std::endl;
 
 	file.close();
 }
 
 void GameOverScene::onEnterScene()
 {
-	scoreText.setString(std::to_string(this->score));
+	scoreText.setString(std::to_string(*this->score));
 	saveScoreToFile();
 }
 

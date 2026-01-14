@@ -9,7 +9,6 @@
 #include <map>
 #include "PrintDebug.h"
 
-
 class SceneManager
 {
 private:
@@ -24,8 +23,8 @@ private:
 	int score;
 
 	std::map<sceneID, Scene*> sceneMap = { 
-		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT, score) },
-		{ sceneID::GAMEOVER, new GameOverScene(WIDTH, HEIGHT, score)}
+		{ sceneID::ASTEROIDGAME, new AsteroidGameScene(WIDTH, HEIGHT, &score) },
+		{ sceneID::GAMEOVER, new GameOverScene(WIDTH, HEIGHT, &score)}
 	};
 
 	Scene* currentScene = sceneMap[sceneID::ASTEROIDGAME];

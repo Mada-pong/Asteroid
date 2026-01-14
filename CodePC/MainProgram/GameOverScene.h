@@ -10,7 +10,7 @@
 class GameOverScene : public Scene
 {
 public:
-	GameOverScene(int width, int height, int& score);
+	GameOverScene(int width, int height, int* score);
 	~GameOverScene() = default;
 
 	// Inherited via Scene
@@ -22,7 +22,7 @@ private:
 	void displayText(sf::Text & textObject, std::string displayedText);
 	void saveScoreToFile();
 
-	int& score;
+	int* score;
 
 	sf::Font font;
 	sf::Text gameOverText;

@@ -1,6 +1,4 @@
 #include "Cooldown.h"
-#include <iostream>
-#include <string>
 
 Cooldown::Cooldown(float duration)
 	: time(duration)
@@ -32,9 +30,9 @@ void Cooldown::start()
 	time = duration;
 }
 
-void Cooldown::setNewTime(float duration)
+void Cooldown::setNewTime(float newDuration)
 {
-	this->duration = duration;
+	this->duration = newDuration;
 }
 
 /// Store a callback function to be called back when the cooldown has been completed.

@@ -1,21 +1,15 @@
 #include "VectorUtility.h"
 
-/// <summary>
-/// Maybe redo VectorUtility to use chain building but this is good enough for now
-/// </summary>
-
-const double VectorUtility::PI = 3.14159265358979323846;
-
 double VectorUtility::degreeToRad(double degrees)
 {
-	double radians = degrees * PI / 180;
+	double radians = degrees * std::numbers::pi / 180;
 	return radians;
 }
 
 sf::Vector2f VectorUtility::getVectorByDegrees(float degrees)
 {
-	double x = std::cos(degreeToRad(degrees));
-	double y = std::sin(degreeToRad(degrees));
+	float x = std::cos(degreeToRad(degrees));
+	float y = std::sin(degreeToRad(degrees));
 
 	return sf::Vector2f(x, y);
 }

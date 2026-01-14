@@ -1,6 +1,6 @@
 #include "AsteroidGameScene.h"
 
-AsteroidGameScene::AsteroidGameScene(int width, int height, int& score)
+AsteroidGameScene::AsteroidGameScene(int width, int height, int* score)
 	: Scene(width, height), score(score)
 {
 	asteroidSpawner->getCooldown().setOnFinished([this]() {
@@ -40,7 +40,7 @@ void AsteroidGameScene::asteroidSetup()
 	Asteroid* asteroidPtr = asteroidSpawner->spawnOutsideBorder();
 
 	asteroidPtr->setOnDied([this](int) {
-		this->score += 10;
+		*this->score += 10;
 		});
 
 	asteroidSpawner->spawnCooldown.start();

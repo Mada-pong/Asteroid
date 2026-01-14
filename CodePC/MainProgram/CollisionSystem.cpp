@@ -1,7 +1,7 @@
 #include "CollisionSystem.h"
-#include "PrintDebug.h"
+#include "VectorUtility.h"
 
-void CollisionSystem::CheckCollision(std::vector<ICollision*>& list_a, std::vector<ICollision*>& list_b)
+void CollisionSystem::CheckCollision(const std::vector<ICollision*>& list_a, const std::vector<ICollision*>& list_b)
 {
 	for (size_t a_index = 0; a_index < list_a.size(); a_index++)
 	{

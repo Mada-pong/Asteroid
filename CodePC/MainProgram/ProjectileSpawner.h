@@ -14,7 +14,6 @@ private:
 	Projectile* spawnObject(sf::Vector2f spawnPosition) override;
 public:
 	ProjectileSpawner(float reloadDuration);
-	~ProjectileSpawner() = default;
 
 	Projectile* spawnObject(sf::Vector2f spawnPosition, float angle, float velocity);
 };

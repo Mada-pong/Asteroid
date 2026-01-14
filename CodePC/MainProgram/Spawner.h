@@ -18,6 +18,12 @@ protected:
 
 	bool isSpawning = false;
 
+	/// <summary>
+	/// Clear and create a new vector list with the pointers ICollisions from objects.
+	/// Output the pointer viewer through reference out. 
+	/// </summary>
+	/// <param name="objects">std::vector<std::unique_ptr<T>>&</param>
+	/// <param name="out">std::vector<ICollision*>&</param>
 	void populatePtrViewer(std::vector<std::unique_ptr<T>>& objects, std::vector<ICollision*>& out)
 	{
 		out.clear();
@@ -29,14 +35,18 @@ protected:
 		}
 	}
 
+	/// <summary>
+	/// Check if the object is marked for removal and then erase it from the list.
+	/// </summary>
 	void removedMarkedForRemovalObjects()
 	{
-		objects.erase(std::remove_if(objects.begin(), objects.end(), [](const std::unique_ptr<T> & object)
+		for (size_t i = 0; i < objects.size(); i++)
+		{
+			if (objects[i]->isMarkedForRemoval())
 			{
-				return object->isMarkedForRemoval();
-			}),
-			objects.end()
-		);
+				objects.erase(objects.begin() + i);
+			}
+		}
 	}
 
 public:
@@ -78,7 +88,6 @@ public:
 
 		removedMarkedForRemovalObjects();
 	}
-
 
 	// Inherited via Drawable
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override

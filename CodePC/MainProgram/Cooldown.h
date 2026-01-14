@@ -5,10 +5,7 @@
 
 class Cooldown
 {
-private: 
-	bool isRunning = false;
-	bool isReady = false;
-
+private:
 	bool isFinished = true;
 
 	std::function<void()> onFinished;
@@ -21,11 +18,10 @@ public:
 	
 	void start();
 
-	void setNewTime(float duration);
+	void setNewTime(float newDuration);
 	void setOnFinished(std::function<void()> callback);
 
 	float getTime();
 };
-
 
 #endif // !COOLDOWN_HPP

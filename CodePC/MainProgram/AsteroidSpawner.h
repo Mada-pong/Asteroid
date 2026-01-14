@@ -1,13 +1,9 @@
 #ifndef ASTEROIDSPAWNER_HPP
 #define ASTEROIDSPAWNER_HPP
 
-#include <vector>
-#include "Entity.h"
 #include "Asteroid.h"
 #include <SFML/Graphics.hpp>
-#include "Cooldown.h"
 #include "Spawner.h"
-#include <functional>
 
 class AsteroidSpawner : public Spawner<Asteroid>
 {
