@@ -31,11 +31,11 @@ private:
 	HealthComponent healthComponent;
 	ProjectileSpawner projectileSpawner;
 
-	void Input();
+	void input();
 
-	void Forward(sf::Vector2f vector); 
-	void Side(float speed);
-	void Turn(float turnRadius);
+	void forward(sf::Vector2f vector); 
+	void side(float speed);
+	void turn(float turnRadius);
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void shoot();
 	void borderWrap();
