@@ -36,7 +36,6 @@ private:
 	void forward(sf::Vector2f vector); 
 	void side(float speed);
 	void turn(float turnRadius);
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void shoot();
 	void borderWrap();
 public: 
@@ -44,6 +43,7 @@ public:
 
 	// Inherited via Entity
 	void update(float deltaTime) override;
+	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void onHit() override;
 
 	ProjectileSpawner& getSpawner() { return projectileSpawner; };

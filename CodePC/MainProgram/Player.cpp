@@ -19,7 +19,7 @@ Player::Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Ve
 void Player::update(float deltaTime)
 {
 	borderWrap();
-	Input();
+	input();
 
 	iFrameCooldown.update(deltaTime);
 	shootingCooldown.update(deltaTime);
@@ -56,35 +56,35 @@ void Player::borderWrap()
 	}
 }
 
-void Player::Input()
+void Player::input()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
 	{
-		Turn(-baseRotationSpeed);
+		turn(-baseRotationSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-		Turn(-baseRotationSpeed);
+		turn(-baseRotationSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
-		Turn(baseRotationSpeed);
+		turn(baseRotationSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
 		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->getSphereShape().getRotation() - this->rotationOffset);
 
-		Forward(dir * baseSpeed);
+		forward(dir * baseSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
 		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->getSphereShape().getRotation() - this->rotationOffset);
 
-		Forward(dir * -baseSpeed);
+		forward(dir * -baseSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
@@ -93,17 +93,17 @@ void Player::Input()
 	}
 }
 
-void Player::Forward(sf::Vector2f vector)
+void Player::forward(sf::Vector2f vector)
 {
 	this->move(vector);
 }
 
-void Player::Side(float speed)
+void Player::side(float speed)
 {
 	this->move(sf::Vector2f(speed, 0));
 }
 
-void Player::Turn(float turnRate)
+void Player::turn(float turnRate)
 {
 	this->getSphereShape().rotate(turnRate);
 }

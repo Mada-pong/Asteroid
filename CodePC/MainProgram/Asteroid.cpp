@@ -17,7 +17,6 @@ Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::
 	this->targetDirection = VectorUtility::getDirectionNormalize(this->targetPosition, getPosition());
 }
 
-///TODO: Redo this to change toRemoval = true
 bool Asteroid::isOutside() const
 {
 	if (getPosition().y < 0 + borderOffset.y || screenBorder.y - borderOffset.y < getPosition().y)
