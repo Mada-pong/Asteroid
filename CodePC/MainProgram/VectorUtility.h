@@ -9,8 +9,6 @@
 
 class VectorUtility
 {
-private: 
-	static const double PI;
 public: 
 	static double degreeToRad(double degrees);
 

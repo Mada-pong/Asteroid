@@ -20,7 +20,7 @@ void AsteroidGameScene::update(float deltaTime)
 
 	if (player.getHealthComponent().getHealth() <= 0)
 	{
-		this->hasPendingTransition = true;
+		this->setTransition(true);
 	}
 }
 
@@ -43,7 +43,7 @@ void AsteroidGameScene::asteroidSetup()
 		*this->score += 10;
 		});
 
-	asteroidSpawner->spawnCooldown.start();
+	asteroidSpawner->getCooldown().start();
 }
 
 void AsteroidGameScene::onEnterScene()

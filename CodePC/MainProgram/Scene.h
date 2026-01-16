@@ -18,7 +18,13 @@ public:
 	virtual void onEnterScene() = 0;
 
 	virtual bool getHasPendingStatus() { return hasPendingTransition; };
-protected:
+
+	virtual int getHeight() { return HEIGHT; }
+	virtual int getWidth() { return WIDTH; }
+
+	virtual bool getTransition() { return hasPendingTransition; }
+	virtual void setTransition(bool isTransitioning) { hasPendingTransition = isTransitioning; }
+private:
 	bool hasPendingTransition = false;
 	const int WIDTH; 
 	const int HEIGHT; 

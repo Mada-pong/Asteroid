@@ -1,3 +1,5 @@
+#ifndef SCENEID_HPP
+#define	SCENEID_HPP
 
 enum sceneID
 {
@@ -7,3 +9,5 @@ enum sceneID
 	SCORE,
 	STAY
 };
+
+#endif // !SCENEID_HPP

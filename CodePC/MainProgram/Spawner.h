@@ -12,11 +12,14 @@
 template <typename T>
 class Spawner : public sf::Drawable
 {
-protected: 
-	std::vector<std::unique_ptr<T>> objects;
-	std::vector<ICollision*> ptrViewer;
-
+private:
+	Cooldown spawnCooldown;
 	bool isSpawning = false;
+
+	std::vector<std::unique_ptr<T>> objects;
+
+	std::vector<ICollision*> ptrViewer;
+protected: 
 
 	/// <summary>
 	/// Clear and create a new vector list with the pointers ICollisions from objects.
@@ -50,12 +53,10 @@ protected:
 	}
 
 public:
-	Cooldown spawnCooldown;
-
 	Spawner(float spawnRate): spawnCooldown(spawnRate){}
-
 	virtual ~Spawner() = default;
 
+	virtual std::vector<std::unique_ptr<T>>& getObjects() { return objects; }
 	virtual Cooldown& getCooldown() { return this->spawnCooldown; }
 
 	virtual T* spawnObject(sf::Vector2f spawnPosition) = 0;

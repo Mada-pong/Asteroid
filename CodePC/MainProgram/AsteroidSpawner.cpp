@@ -14,20 +14,20 @@ void AsteroidSpawner::update(float deltaTime)
 {
 	Spawner::update(deltaTime);
 
-	for (size_t i = 0; i < this->objects.size(); i++)
+	for (size_t i = 0; i < this->getObjects().size(); i++)
 	{
-		if (objects[i]->isOutside())
+		if (getObjects()[i]->isOutside())
 		{
-			objects[i]->setMarkedForRemoval();
+			getObjects()[i]->setMarkedForRemoval();
 		}
 	}
 }
 
 Asteroid* AsteroidSpawner::spawnObject(sf::Vector2f spawnPosition)
 {
-	objects.emplace_back(std::make_unique<Asteroid>(spawnPosition, centerPosition, sf::Color::White, 40, 1, sf::Vector2f(xMax, yMax)));
+	getObjects().emplace_back(std::make_unique<Asteroid>(spawnPosition, centerPosition, sf::Color::White, 40, 1, sf::Vector2f(xMax, yMax)));
 
-	return objects.back().get();
+	return getObjects().back().get();
 }
 
 Asteroid* AsteroidSpawner::spawnOutsideBorder()

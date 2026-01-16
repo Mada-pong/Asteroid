@@ -15,7 +15,6 @@ public:
 	// Inherited via Scene
 	void update(float deltaTime) override;
 	void draw(sf::RenderWindow& window) override;
-
 private: 
 	sceneID changeTransition() override;
 	void displayText(sf::Text & textObject, std::string displayedText);

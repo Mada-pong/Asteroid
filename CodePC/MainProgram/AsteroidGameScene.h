@@ -21,8 +21,8 @@ private:
 	float asteroidSpawnRate = 0.5f;
 
 	// General player stats
-	sf::Vector2f playerStartPosition = sf::Vector2f(WIDTH / 2, HEIGHT / 2);
-	sf::Vector2f borderLimit = sf::Vector2f(WIDTH, HEIGHT);
+	sf::Vector2f playerStartPosition = sf::Vector2f(getWidth() / 2, getHeight() / 2);
+	sf::Vector2f borderLimit = sf::Vector2f(getWidth(), getHeight());
 	sf::Color playerColor = sf::Color::Red;
 	float playerSize = 5;
 
@@ -31,7 +31,7 @@ private:
 	Player player = Player(playerStartPosition, playerColor, playerSize, borderLimit);
 	std::vector<ICollision*> playerGroup{ &player };
 
-	std::unique_ptr<AsteroidSpawner> asteroidSpawner = std::make_unique<AsteroidSpawner>(WIDTH, HEIGHT, asteroidSpawnRate);
+	std::unique_ptr<AsteroidSpawner> asteroidSpawner = std::make_unique<AsteroidSpawner>(getWidth(), getHeight(), asteroidSpawnRate);
 
 	// Inherited via Scene
 	sceneID changeTransition() override;
