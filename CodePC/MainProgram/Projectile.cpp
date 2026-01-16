@@ -7,9 +7,9 @@ Projectile::Projectile(sf::Vector2f startPosition, sf::Color color, float radius
 	direction = VectorUtility::getVectorByDegrees(angle);
 	direction = VectorUtility::normalizeVector(direction);
 
-	this->sphereShape.setOrigin(sf::Vector2f(radius, radius));
+	this->getSphereShape().setOrigin(sf::Vector2f(radius, radius));
 
-	timeToLiveCooldown.setOnFinished([this]() { markedForRemoval = true; });
+	timeToLiveCooldown.setOnFinished([this]() { setMarkedForRemoval(); });
 	timeToLiveCooldown.start();
 }
 

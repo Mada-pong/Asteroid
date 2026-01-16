@@ -10,7 +10,7 @@ Player::Player(sf::Vector2f startPosition, sf::Color color, float radius, sf::Ve
 	shootingCooldown(fireRate)
 {
 	this->setScale(sf::Vector2f(0.7f, 2));
-	this->sphereShape.setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
+	this->getSphereShape().setOrigin(sf::Vector2f((radius / 2) * 0.7f, (radius / 2) * 2));
 
 	iFrameCooldown.setOnFinished([this]() { this->isInvincible = false; });
 	shootingCooldown.setOnFinished([this]() { this->canShoot = true; });
@@ -75,14 +75,14 @@ void Player::Input()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
-		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
+		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->getSphereShape().getRotation() - this->rotationOffset);
 
 		Forward(dir * baseSpeed);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
-		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->sphereShape.getRotation() - this->rotationOffset);
+		sf::Vector2f dir = VectorUtility::getVectorByDegrees(this->getSphereShape().getRotation() - this->rotationOffset);
 
 		Forward(dir * -baseSpeed);
 	}
@@ -105,7 +105,7 @@ void Player::Side(float speed)
 
 void Player::Turn(float turnRate)
 {
-	this->sphereShape.rotate(turnRate);
+	this->getSphereShape().rotate(turnRate);
 }
 
 void Player::shoot()
@@ -113,7 +113,7 @@ void Player::shoot()
 	if (!canShoot)
 		return;
 
-	projectileSpawner.spawnObject(this->getPosition(), this->sphereShape.getRotation() - this->rotationOffset, 10);
+	projectileSpawner.spawnObject(this->getPosition(), this->getSphereShape().getRotation() - this->rotationOffset, 10);
 	canShoot = false;
 	shootingCooldown.start();
 }

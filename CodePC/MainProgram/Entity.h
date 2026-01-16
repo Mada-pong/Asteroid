@@ -6,14 +6,16 @@
 
 class Entity : public sf::Drawable, public sf::Transformable, public ICollision
 {
-protected:
+
+private: 
 	sf::CircleShape sphereShape;
 	sf::Vector2f position;
-
-	float angle;
 	sf::Vector2f scale;
+	float angle;
 
 	bool markedForRemoval = false;
+protected:
+	sf::CircleShape getSphereShape() const { return sphereShape; }
 public:
 	Entity(sf::Vector2f startPosition, sf::Color color, float radius);
 

@@ -11,7 +11,7 @@ Asteroid::Asteroid(sf::Vector2f startPosition, sf::Vector2f targetPosition, sf::
 	: Entity(startPosition, sf::Color::White, radius), screenBorder(screenBorder), healthComponent(baseHP),
 	baseSpeed(speed)
 {
-	this->sphereShape.setOrigin(radius, radius);
+	this->getSphereShape().setOrigin(radius, radius);
 
 	this->targetPosition = targetPosition;
 	this->targetDirection = VectorUtility::getDirectionNormalize(this->targetPosition, getPosition());

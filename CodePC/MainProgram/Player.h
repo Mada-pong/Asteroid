@@ -21,8 +21,9 @@ private:
 	bool isInvincible = false;
 	bool canShoot = true;
 
-	sf::Vector2f screenBorder;
 	int borderOffset = 50;
+
+	sf::Vector2f screenBorder;
 
 	Cooldown iFrameCooldown;
 	Cooldown shootingCooldown;
